@@ -1,0 +1,79 @@
+/* HERO SECTION */
+.hero-container > img {
+    height: 40em;
+    width: 100%;
+}
+
+.hero-container {
+    position: relative;
+    text-align: center;
+    color: black;
+}
+
+.hero-texts {
+    position: absolute;
+    top: 35%;
+    /* left: 20%; */
+    text-align: justify;
+    margin-left: 25%;
+}
+.hero-texts > h1 {
+    font-weight: 1;
+    /* padding-bottom: 10px; */
+    font-size: clamp(2.7em, 3.5vw, 3.8em);
+}
+
+.hero-btn button {
+    padding: 1.1em 3.8em;
+    margin-right: 1em;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+}
+
+/* FUND NEWS */
+.fund-news {
+    background-color: red;
+    height: 10em;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+
+
+
+/* AUSTIN OZ FUNDS  */
+.oz-funds {
+    display: grid;
+    grid-template-columns: 50% auto;
+    padding-left: 20vw;
+    /* padding-right: 14%; */
+    padding-bottom: 4em;
+}
+
+.oz-texts {
+    text-align: justify;
+    /* padding-right: 6em; */
+    font-size: 1.2em;
+}
+
+.oz-texts button {
+    padding: 1em 2em 1em 2em;
+    font-size: 0.8em;
+    font-weight: bolder;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(94, 68, 38);
+    color: white;
+}
+
+.oz-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.oz-img img {
+    border-radius: 0;
+    width: 60%;
+}

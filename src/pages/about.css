@@ -1,0 +1,42 @@
+.about-head {
+    background-color: rgb(26, 25, 25);
+    color: white;
+    margin: 0;
+    /* padding-bottom: 1.3em; */
+
+    padding-top: 1.4em;
+    padding-bottom: 1.3em;
+    font-size: 1.8em;
+}
+
+.about-page {
+    margin: 0;
+}
+
+.about-page-text {
+    max-width: clamp(30em, 50vw, 52em);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+    padding-bottom: 5%;
+}
+
+.about-page-text > h1 {
+    font-size: 1.8em;
+}
+
+.about-page-text > p, .management-container > p {
+    margin: 0;
+    line-height: 1.6em;
+    font-weight: 100;
+}
+
+.about-blue-txt {
+    color: rgb(28, 114, 205);
+    font-weight: 400;
+    font-size: 1.8em;
+}
+
+.management-container > h1 {
+    font-size: 1.8em;
+}

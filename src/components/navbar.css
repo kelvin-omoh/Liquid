@@ -1,0 +1,52 @@
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(26, 25, 25);
+    /* padding: 0.5em; */
+    padding: 9.7px;
+    color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 9;
+}
+
+.navbar h1 {
+    /* font-size: clamp(1.8em, 2.4vw, 2.4em); */
+}
+
+.navbar > ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.navbar a {
+    text-decoration: none;
+    padding-left: 1em;
+    color: white;
+    align-self: center;
+}
+
+.navbar a #investor {
+    border-right-style: none;
+}
+
+/* .navbar ul > a {
+
+} */
+
+.navbar a > li {
+    font-weight: 100;
+    transition: 0.3s;
+    border-right-style: solid;
+    border-right-color: white;
+    border-right-width: 0.1px;
+
+    padding-right: 0.8em;
+}
+
+.navbar a > li:hover {
+    border-bottom-style: solid ;
+    border-bottom-color: rgb(94, 68, 38);
+    border-bottom-width:  0.5px;
+    padding-bottom: 0.5em;
+}
