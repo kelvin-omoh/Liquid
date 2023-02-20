@@ -1,0 +1,38 @@
+footer {
+    text-align: justify;
+
+}
+
+.footer-black {
+    background-color: rgb(26, 25, 25);
+    color: white;
+    padding: 1em;
+    padding-left: 20%;
+    padding-bottom: 2em;
+}
+
+.footer-black h1 {
+    font-size: 4.3vw;
+}
+
+.footer-black svg {
+    fill: white;
+    border: 1px solid white;
+    margin-top: 1em;
+    padding: 0.5em;
+    margin-right: 0.5em;
+}
+
+.footer-other {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20%;
+    width: 600px;
+}
+
+.footer-other p {
+    border-right-style: solid;
+    border-right-color: black;
+    border-right-width: 0.1px;
+    padding-right: 0.8em;
+}
