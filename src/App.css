@@ -1,4 +1,13 @@
 .App {
+  /* background-color: red; */
+  text-align: center;
+}
+
+.other-pages {
+  /* padding-top: 6.6em; */
+  padding-top: 105px;
+}
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +44,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */

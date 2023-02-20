@@ -1,0 +1,143 @@
+* {
+    /* outline: 1px solid limegreen; */
+}
+
+.funds-head {
+    background-color: rgb(26, 25, 25);
+    color: white;
+    margin: 0;
+    padding-top: 1.4em;
+    padding-bottom: 1.3em;
+    font-size: 1.8em;
+}
+
+.funds-plans-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 4%;
+
+    margin-left: clamp(3em, 15vw, 16em);
+    margin-right: clamp(3em, 15vw, 16em);
+    margin-bottom: 4%;
+    margin-top: 4%
+}
+
+.funds-plan-item {
+    text-align: justify;
+}
+
+.funds-plan-item p {
+    font-weight: 300;
+}
+
+.funds-plan-item > h1 {
+    font-size: 2.4em;
+}
+.funds-plan-item > h2 {
+    font-weight: 400;
+}
+
+.funds-plan-item ul {
+    list-style-type: none;
+    padding-left: 0em;
+    font-weight: 300;
+}
+  
+.funds-plan-item ul li:before {
+    content: '✓';
+  }
+
+.funds-plan-item button {
+    width: 100%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border: 1px solid black;
+    background-color: transparent;
+}
+
+.funds-opportunity-zone > h1 {
+    margin: 0;
+    margin-top: -4px;
+    padding: 1.3em;
+    background-color: rgb(84, 77, 18);
+    color: white;
+    font-weight: 400;
+    font-size: 2.8em;
+}
+
+.funds-opportunity-item {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.funds-opportunity-item img {
+    width: 100%;
+    min-height: 100%;
+}
+
+.funds-opportunity-text {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.funds-opportunity-text > h1 {
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+    font-size: 2.7em;
+}
+
+.funds-opportunity-text p {
+    width: 30em;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5em;
+    font-weight: 100;
+}
+
+.funds-opportunity-text button {
+    border: none;
+    padding: 1em 3em 1em 3em;
+    background-color: rgb(255, 196, 0);
+    margin-top: 3%;
+    font-size: 1.1em;
+}
+
+@media screen and (max-width: 1000px) {
+    * {
+        /* background-color: red; */
+    }
+
+    .one {
+        grid-template-columns: 30% 70%;
+    }
+
+    .one img {
+        height: 30vw;
+    }
+
+    .two {
+        grid-template-columns: 70% 30%;
+    }
+
+    .two img {
+        height: 30vw;
+    }
+
+    .three {
+        grid-template-columns: 30% 70%;
+    }
+
+    .three img {
+        height: 30vw;
+    }
+
+    .four {
+        grid-template-columns: 70% 30%;
+    }
+
+    .four img {
+        height: 30vw;
+    }
+
+}

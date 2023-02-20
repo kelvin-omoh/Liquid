@@ -13,16 +13,16 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      {/* <h1>Hello Liquid</h1> */}
-      <Routes>
-        <Route path='/' element={<Home />}></Route>
-        <Route path='/about' element={<About />}></Route>
-        <Route path='/funds' element={<Funds />}></Route>
-        <Route path='/investors' element={<Investors />}></Route>
-        <Route path='/news' element={<News />}></Route>
-        <Route path='/tracts' element={<Tracts />}></Route>
-      </Routes>
-
+      <div className='other-pages'>
+        <Routes>
+          <Route path='/' element={<Home />}></Route>
+          <Route path='/about' element={<About />}></Route>
+          <Route path='/funds' element={<Funds />}></Route>
+          <Route path='/investors' element={<Investors />}></Route>
+          <Route path='/news' element={<News />}></Route>
+          <Route path='/tracts' element={<Tracts />}></Route>
+        </Routes>
+      </div>
       <Footer />
     </div>
   );

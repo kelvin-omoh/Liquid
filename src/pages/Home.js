@@ -1,7 +1,7 @@
 import './home.css'
 import heroImg from '../Images/Hero Img.png'
-import investorIMG from '../Images/Crypto bg.png'
 import img3 from '../Images/blog 1.png'
+import InvestorProspectus from '../components/investorProspectus'
 
 export default function Home() {
     return (
@@ -28,16 +28,7 @@ export default function Home() {
                 </div>
             </div>
 
-            <div className='investor-prospectus'>
-                <img src={investorIMG}></img>
-                <div className='investor-txt'>
-                    <div>
-                        <h1>INVESTOR PROSPECTUS</h1>
-                        <input placeholder='your@email.co'></input>
-                        <button>Download</button>
-                    </div>
-                </div>
-            </div>
+            <InvestorProspectus />
 
             <div className='oz-funds'>
                 <div className='oz-texts'>
