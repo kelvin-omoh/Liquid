@@ -11,7 +11,7 @@ export default function Home() {
             <div className='hero-container'>
                 <img src={heroImg}></img>
                 <div className='hero-texts'>
-                    <h1>Liquid Investments</h1>
+                    <h1>GLOBAL FINANCE Investments</h1>
                     <p>Diversified Opportunity Zone And Blockchain Funds</p>
                     <div className='hero-btn'>
                         <Link to='/funds'><button>Learn More</button></Link>
@@ -33,7 +33,7 @@ export default function Home() {
                         <div className='fund-news-text'>
                             <h3>THE MOST DEVELOPED OPPORTUNITY ZONES IN TEXAS</h3>
                             <hr/>
-                            <p>LIQUID - 02/13/2023</p>
+                            <p>GLOBAL FINANCE - 02/13/2023</p>
                         </div>
                     </div>
 
@@ -46,7 +46,7 @@ export default function Home() {
                         <div className='fund-news-text'>
                             <h3>THE MOST DEVELOPED OPPORTUNITY ZONES IN TEXAS</h3>
                             <hr/>
-                            <p>LIQUID - 02/13/2023</p>
+                            <p>GLOBAL FINANCE - 02/13/2023</p>
                         </div>
                     </div>
 
@@ -59,7 +59,7 @@ export default function Home() {
                         <div className='fund-news-text'>
                             <h3>THE MOST DEVELOPED OPPORTUNITY ZONES IN TEXAS</h3>
                             <hr/>
-                            <p>LIQUID - 02/13/2023</p>
+                            <p>GLOBAL FINANCE - 02/13/2023</p>
                         </div>
                     </div>
                     </div>

@@ -5,7 +5,7 @@ export default function Footer() {
     return (
         <footer>
             <div className='footer-black'>
-                <h1>LIQUID</h1>
+                <h1>GLOBAL FINANCE</h1>
                 <p>Diversified Opportunity Zone And Blockchain Funds</p>
 
                 <div className="icons">

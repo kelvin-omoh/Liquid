@@ -21,7 +21,7 @@ export default function News() {
                             investment? Let's look at the five most developed Opportunity Zones in Texas.
                         </p>
                         <hr/>
-                        <p>LIQUID - 02/13/2023</p>
+                        <p>GLOBAL FINANCE - 02/13/2023</p>
                     </div>
                 </div>
 
@@ -37,7 +37,7 @@ export default function News() {
                             investment? Let's look at the five most developed Opportunity Zones in Texas.
                         </p>
                         <hr/>
-                        <p>LIQUID - 02/13/2023</p>
+                        <p>GLOBAL FINANCE - 02/13/2023</p>
                     </div>
                 </div>
 
@@ -53,7 +53,7 @@ export default function News() {
                             investment? Let's look at the five most developed Opportunity Zones in Texas.
                         </p>
                         <hr/>
-                        <p>LIQUID - 02/13/2023</p>
+                        <p>GLOBAL FINANCE - 02/13/2023</p>
                     </div>
                 </div>
 
@@ -69,7 +69,7 @@ export default function News() {
                             investment? Let's look at the five most developed Opportunity Zones in Texas.
                         </p>
                         <hr/>
-                        <p>LIQUID - 02/13/2023</p>
+                        <p>GLOBAL FINANCE - 02/13/2023</p>
                     </div>
                 </div>
 
@@ -85,7 +85,7 @@ export default function News() {
                             investment? Let's look at the five most developed Opportunity Zones in Texas.
                         </p>
                         <hr/>
-                        <p>LIQUID - 02/13/2023</p>
+                        <p>GLOBAL FINANCE - 02/13/2023</p>
                     </div>
                 </div>
 
@@ -101,7 +101,7 @@ export default function News() {
                             investment? Let's look at the five most developed Opportunity Zones in Texas.
                         </p>
                         <hr/>
-                        <p>LIQUID - 02/13/2023</p>
+                        <p>GLOBAL FINANCE - 02/13/2023</p>
                     </div>
                 </div>
 

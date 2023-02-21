@@ -9,7 +9,7 @@ export default function Navbar() {
 
     return (
         <div className="navbar">
-            <h1><Link to='/'>LIQUID</Link></h1>
+            <h1><Link to='/'>GLOBAL FINANCE</Link></h1>
             <ul>
                 <Link to='/about' ><li id={pathname == '/about' && 'active'}>ABOUT</li></Link>
                 <Link to='/funds'><li id={pathname == '/funds' && 'active'} >FUNDS</li></Link>
