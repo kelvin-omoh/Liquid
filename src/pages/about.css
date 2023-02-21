@@ -40,3 +40,13 @@
 .management-container > h1 {
     font-size: 1.8em;
 }
+
+@media screen and (max-width: 770px) {
+
+    .about-page-text {
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+
+    
+}

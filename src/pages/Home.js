@@ -2,6 +2,7 @@ import './home.css'
 import heroImg from '../Images/Hero Img.png'
 import img3 from '../Images/blog 1.png'
 import InvestorProspectus from '../components/investorProspectus'
+import { Link } from 'react-router-dom'
 
 export default function Home() {
     return (
@@ -13,19 +14,55 @@ export default function Home() {
                     <h1>Liquid Investments</h1>
                     <p>Diversified Opportunity Zone And Blockchain Funds</p>
                     <div className='hero-btn'>
-                        <button>Learn More</button>
-                        <button>Investors</button>
+                        <Link to='/funds'><button>Learn More</button></Link>
+                        <Link to='/investors'><button>Investors</button></Link>
                     </div>
                 </div>
             </div>
 
             <div className='fund-news'>
                 <h2>OZ FUND NEWS</h2>
+
                 <div className='fund-news-container'>
                     <div className='fund-news-item'>
-
+                        <div className='news-img'>
+                            {/* <img src={img1}/> */}
+                            <button className='fund-news-btn'>NEWS</button>
+                            <span className='fund-news-L'>L</span>
+                        </div>
+                        <div className='fund-news-text'>
+                            <h3>THE MOST DEVELOPED OPPORTUNITY ZONES IN TEXAS</h3>
+                            <hr/>
+                            <p>LIQUID - 02/13/2023</p>
+                        </div>
                     </div>
-                </div>
+
+                    <div className='fund-news-item'>
+                        <div className='news-img'>
+                            {/* <img src={img1}/> */}
+                            <button className='fund-news-btn'>NEWS</button>
+                            <span className='fund-news-L'>L</span>
+                        </div>
+                        <div className='fund-news-text'>
+                            <h3>THE MOST DEVELOPED OPPORTUNITY ZONES IN TEXAS</h3>
+                            <hr/>
+                            <p>LIQUID - 02/13/2023</p>
+                        </div>
+                    </div>
+
+                    <div className='fund-news-item'>
+                        <div className='news-img'>
+                            {/* <img src={img1}/> */}
+                            <button className='fund-news-btn'>NEWS</button>
+                            <span className='fund-news-L'>L</span>
+                        </div>
+                        <div className='fund-news-text'>
+                            <h3>THE MOST DEVELOPED OPPORTUNITY ZONES IN TEXAS</h3>
+                            <hr/>
+                            <p>LIQUID - 02/13/2023</p>
+                        </div>
+                    </div>
+                    </div>
             </div>
 
             <InvestorProspectus />
@@ -43,7 +80,7 @@ export default function Home() {
                         and revitalize underutilized areas, improving the quality of life for residents and spurring economic growth in the city.
                     </p>
 
-                    <button>Learn More About OZ Funds in Austin</button>                
+                    <Link to='/funds'><button>Learn More About OZ Funds in Austin</button></Link>
                 </div>
 
                 <div className='oz-img'>
