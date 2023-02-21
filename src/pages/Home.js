@@ -22,11 +22,47 @@ export default function Home() {
 
             <div className='fund-news'>
                 <h2>OZ FUND NEWS</h2>
+
                 <div className='fund-news-container'>
                     <div className='fund-news-item'>
-
+                        <div className='news-img'>
+                            {/* <img src={img1}/> */}
+                            <button className='fund-news-btn'>NEWS</button>
+                            <span className='fund-news-L'>L</span>
+                        </div>
+                        <div className='fund-news-text'>
+                            <h3>THE MOST DEVELOPED OPPORTUNITY ZONES IN TEXAS</h3>
+                            <hr/>
+                            <p>LIQUID - 02/13/2023</p>
+                        </div>
                     </div>
-                </div>
+
+                    <div className='fund-news-item'>
+                        <div className='news-img'>
+                            {/* <img src={img1}/> */}
+                            <button className='fund-news-btn'>NEWS</button>
+                            <span className='fund-news-L'>L</span>
+                        </div>
+                        <div className='fund-news-text'>
+                            <h3>THE MOST DEVELOPED OPPORTUNITY ZONES IN TEXAS</h3>
+                            <hr/>
+                            <p>LIQUID - 02/13/2023</p>
+                        </div>
+                    </div>
+
+                    <div className='fund-news-item'>
+                        <div className='news-img'>
+                            {/* <img src={img1}/> */}
+                            <button className='fund-news-btn'>NEWS</button>
+                            <span className='fund-news-L'>L</span>
+                        </div>
+                        <div className='fund-news-text'>
+                            <h3>THE MOST DEVELOPED OPPORTUNITY ZONES IN TEXAS</h3>
+                            <hr/>
+                            <p>LIQUID - 02/13/2023</p>
+                        </div>
+                    </div>
+                    </div>
             </div>
 
             <InvestorProspectus />

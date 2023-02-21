@@ -50,3 +50,20 @@
     border-bottom-width:  0.5px;
     padding-bottom: 0.5em;
 }
+
+#active {
+    border-bottom-style: solid ;
+    border-bottom-color: rgb(94, 68, 38);
+    border-bottom-width:  0.5px;
+    padding-bottom: 0.5em;
+}
+
+#investor-active {
+    border-right-style: none;
+    border-bottom-style: solid ;
+    border-bottom-color: rgb(94, 68, 38);
+    border-bottom-width:  0.5px;
+    padding-bottom: 0.5em;
+
+}
+
