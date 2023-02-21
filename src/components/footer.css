@@ -36,3 +36,16 @@ footer {
     border-right-width: 0.1px;
     padding-right: 0.8em;
 }
+
+@media screen and (max-width: 770px) {
+    .footer-black {
+        padding-left: 5%;
+    }
+    .footer-other {
+        display: flex;
+        justify-content: space-around;
+        padding-left: 5%;
+        width: auto;
+        font-size: 0.8em;
+    }
+}

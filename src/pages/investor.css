@@ -1,0 +1,157 @@
+* {
+    /* outline: 1px solid limegreen; */
+}
+
+.investor-page > .investor-request, .investor-login{
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.investor-head {
+    background-color: rgb(26, 25, 25);
+    color: white;
+    margin: 0;
+    padding-top: 1.4em;
+    padding-bottom: 1.3em;
+    font-size: 1.8em;
+}
+
+.investor-request {
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: 4em;
+}
+
+.investor-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 7%;
+}
+
+.investor-text > p {
+    line-height: 1.9em;
+    font-weight: 300;
+}
+
+.investor-text > .investor-bold-text {
+    font-weight: bolder;
+    font-size: 1.3em;
+}
+
+.investor-request-form {
+    display: flex;
+    flex-direction: column;
+    justify-self: flex-start;
+    text-align: justify;
+    /* background-color: red; */
+    width: 100%;
+}
+
+.investor-request-form input {
+    padding: 1em 0em 1em 0.5em;    
+    border: 1px solid gray;
+}
+
+select {
+    padding: 1em 4em 1em 0.8em;
+    margin-bottom: 1em;
+}
+
+.investor-request-form label {
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
+
+.investor-request-form button {
+    border: 0;
+    font-weight: bolder;
+    padding: 1em 0em 1em 0em;
+    background-color: rgb(255, 196, 0);
+}
+
+.investor-request-form ::placeholder {
+    color: gray;
+    font-size: 1.3em;
+}
+
+.form-names-container {
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 5%;
+}
+
+.form-names-container > .form-name {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+}
+
+.form-names-container > .form-name > label,input {
+    width: 100%;
+}
+
+.investor-page hr {
+    width: 60%;
+    margin-top: 7%;
+    margin-bottom: 5%;
+    border-color: black;
+}
+
+/* INVESTOR LOGIN SECTION */
+.investor-login {
+    width: 30% ;
+    text-align: justify;
+}
+
+.investor-login h3 {
+    font-size: 2em;
+    font-weight: 400;
+    text-align: center;
+}
+
+.investor-login > .loginItem {
+    text-align: justify;
+}
+
+.loginItem {
+    /* background-color: blue; */
+}
+.investor-login .loginItem input {
+    margin-top: 1em;
+    padding: 0.5em 0em 0.5em 0em;
+    /* background-color: red; */
+}
+
+.investor-login button {
+    width: 100%;
+    background-color: rgb(16, 34, 78);
+    border: none;
+    color: white;
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+    font-size: 1.3em;
+}
+
+@media screen and (max-width: 770px) {
+    * {
+        /* background-color: red; */
+    }   
+    .investor-page > .investor-request, .investor-login{
+        width: 85%;
+    }
+
+    .investor-request {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .investor-login {
+        width: 65% ;
+        text-align: justify;
+    }
+}
+

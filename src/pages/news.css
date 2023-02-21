@@ -1,0 +1,117 @@
+* {
+    /* outline: 1px solid limegreen; */
+}
+
+.news-page {
+    /* overflow: hidden; */
+}
+.news-head {
+    background-color: rgb(26, 25, 25);
+    color: white;
+    margin: 0;
+    padding-top: 1.4em;
+    padding-bottom: 1.3em;
+    font-size: 1.8em;
+}
+
+.news-container {
+    width: 60vw;
+    max-width: 80%;
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+
+}
+
+.news-item {
+    margin-bottom: 2em;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* overflow: hidden; */
+}
+
+.news-item > img {
+    width: 100%;
+}
+
+.news-item .news-img {
+    position: relative;
+    background-image: url('../Images/blog 1.png');
+    background-size: cover;
+    height: clamp(10em, 16vw, 13em);
+}
+
+
+.news-btn {
+    position: absolute;
+    top: 13%;
+    right: 5%;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.8em;
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+    padding-left: 1em;
+    padding-right: 1em;
+    background-color: rgb(96, 69, 20);
+    color: white;
+}
+
+.news-L {
+    background-color: rgb(49, 40, 23);
+    font-size: 2em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    border-radius: 50%;
+    color: white;
+
+    /* width: 100%; */
+    position: absolute;
+    bottom: -10%;
+    left: 10%;
+    display: flex;
+    text-align: justify;
+    justify-content: center;
+
+}
+
+.news-text {
+    text-align: justify;
+    padding-top: 1.2em;
+    /* background-color: red; */
+}
+
+.news-text h3 {
+    font-size: clamp(0.8em, 1vw, 1.1em);
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+.news-text p {
+    font-size: clamp(0.8em, 1.2vw, 1.1em);
+    font-weight: 300;
+    line-height: 1.5em;
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-bottom: 0.6em;
+}
+
+@media screen and (max-width: 800px) {
+    * {
+        /* background-color: red; */
+    }
+    
+    .news-container {
+        width: 100%;
+        margin-top: 5%;
+        gap: 3%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 5%;
+        /* background-color: red; */
+    }
+}

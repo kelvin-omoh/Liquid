@@ -12,7 +12,7 @@
     grid-template-columns: auto auto auto;
     gap: 4%;
 
-    margin-left: clamp(3em, 15vw, 16em);
+    margin-left: clamp(2em, 15vw, 16em);
     margin-right: clamp(3em, 15vw, 16em);
     margin-bottom: 4%;
     margin-top: 4%
@@ -58,7 +58,7 @@
     background-color: rgb(84, 77, 18);
     color: white;
     font-weight: 400;
-    font-size: 2.8em;
+    font-size: clamp(2em, 2.9vw, 3em);
 }
 
 .funds-opportunity-item {
@@ -135,5 +135,58 @@
     .four img {
         height: 30vw;
     }
+}
+
+@media screen and (max-width: 770px) {
+    .funds-plans-container {
+        display: flex;
+        flex-direction: column;
+
+        margin-left: 2.5em;
+        margin-right: 2.5em;
+        margin-bottom: 4%;
+        margin-top: 4%
+    }   
+
+    .funds-plan-item > p {
+        text-align: justify;
+        font-size: 1.2em;
+    }
+    .funds-plan-item ul {
+        list-style-type: none;
+        padding-left: 0em;
+        font-size: 1.2em;
+    }
+    
+    .funds-opportunity-text button {
+        margin-bottom: 2em;
+    }
+    
+    .funds-opportunity-item {
+        margin-bottom: 1em;
+    }
+
+   .one{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .two {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .three{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .four {
+        display: flex;
+        flex-direction: column;
+    }
+
 
 }
+
+
