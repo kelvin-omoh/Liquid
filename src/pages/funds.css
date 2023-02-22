@@ -1,5 +1,5 @@
 .funds-head {
-    background-color: rgb(26, 25, 25);
+    background-color:rgb(36,32,33);
     color: white;
     margin: 0;
     padding-top: 1.4em;
@@ -9,25 +9,27 @@
 
 .funds-plans-container {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns:repeat(3,1fr);
     gap: 4%;
-
-    margin-left: clamp(2em, 15vw, 16em);
-    margin-right: clamp(3em, 15vw, 16em);
-    margin-bottom: 4%;
-    margin-top: 4%
+    margin: 0 12em 10% 12em;
+    /* margin-top: 10% */
 }
 
 .funds-plan-item {
     text-align: justify;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+
 }
 
 .funds-plan-item p {
-    font-weight: 300;
+    font-weight: 100;
 }
 
 .funds-plan-item > h1 {
-    font-size: 2.4em;
+    font-size: 3.4em;
+    font-weight: 700;
 }
 .funds-plan-item > h2 {
     font-weight: 400;
@@ -68,6 +70,8 @@
 
 .funds-opportunity-item img {
     width: 100%;
+    height: 76vh;
+    object-fit: cover;
     min-height: 100%;
 }
 
@@ -84,11 +88,12 @@
 }
 
 .funds-opportunity-text p {
-    width: 30em;
+    max-width: 30em;
     margin-left: auto;
     margin-right: auto;
-    line-height: 1.5em;
-    font-weight: 100;
+    line-height: 2.0em;
+    font-weight:lighter;
+    padding: .4em;
 }
 
 .funds-opportunity-text button {

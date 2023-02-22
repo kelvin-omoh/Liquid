@@ -1,11 +1,14 @@
 
 .tracts-head {
-    background-color: rgb(26, 25, 25);
+    background-color: rgb(36,32,33);
     color: white;
     margin: 0;
     padding-top: 1.4em;
     padding-bottom: 1.3em;
     font-size: 1.8em;
+}
+.imgs{
+    filter: grayscale(1);
 }
 
 .tracts-text {
@@ -14,6 +17,7 @@
     margin-left: auto;
     margin-right: auto;
     text-align: justify;
+    
 }
 
 .tracts-text h1 {

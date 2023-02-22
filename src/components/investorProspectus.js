@@ -1,16 +1,16 @@
 import './investorProspectus.css'
-import investorIMG from '../Images/Crypto bg.png'
+import investorIMG from '../Images/investor-prospectus-liquid-investment-funds-jpg.webp'
 
 export default function InvestorProspectus() {
     return (
         <div className='investor-prospectus'>
-            <img src={investorIMG}></img>
+            <img className=' object-cover' src={investorIMG}></img>
             {/* <div className='investor-txt'> */}
             <div className='investor-prospectus-text'>
                 <div>
-                    <h1>INVESTOR PROSPECTUS</h1>
-                    <input placeholder='your@email.co'></input>
-                    <button>Download</button>
+                    <h1 className='text-center md:text-left'>INVESTOR PROSPECTUS</h1>
+                    <input className=' text-[1em]' placeholder='your@email.com'></input>
+                    <button className=''>Download</button>
                 </div>
             </div>
         </div>

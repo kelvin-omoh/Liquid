@@ -1,5 +1,8 @@
 import './tracts.css'
-import tractImg from '../Images/blog 3.png'
+import tractImg from '../Images/east-st-elmo-opportunity-zone.jpg'
+import tractImg2 from '../Images/old-montopolis-opportunity-zone-fund.png'
+import tractImg3 from '../Images/east-oltorf-opportunity-zone-fund.png'
+import tractImg4 from '../Images/parker-lane-opportunity-zone-fund.png'
 import InvestorProspectus from '../components/investorProspectus'
 
 export default function Tracts() {
@@ -11,7 +14,7 @@ export default function Tracts() {
                 {/* <h1>Opportunity Zone Investments Funds</h1> */}
 
                 <div className='funds-opportunity-item one'>
-                    <img src={tractImg}/>
+                    <img className='imgs' src={tractImg}/>
                     <div className='tracts-text'>
                         <h1>TRACT 24.13</h1>
                         <h2>EAST ST ELMO</h2>
@@ -37,11 +40,11 @@ export default function Tracts() {
                         <p className='tracts-last-p'>AUSTIN | TRAVIS COUNTY | TEXAS | 78744</p>
 
                     </div>
-                    <img src={tractImg}/>
+                    <img className='imgs' src={tractImg2}/>
                 </div>
 
                 <div className='funds-opportunity-item three'>
-                    <img src={tractImg}/>
+                    <img className='imgs' src={tractImg3}/>
                     <div className='tracts-text'>
                         <h1>TRACT 24.13</h1>
                         <h2>EAST ST ELMO</h2>
@@ -67,7 +70,7 @@ export default function Tracts() {
                         <p className='tracts-last-p'>AUSTIN | TRAVIS COUNTY | TEXAS | 78744</p>
 
                     </div>
-                    <img src={tractImg}/>
+                    <img className='imgs' src={tractImg4}/>
                 </div>
 
             </div>

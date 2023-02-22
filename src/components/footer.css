@@ -1,5 +1,20 @@
 footer {
     text-align: justify;
+    
+}
+ footer ul{
+    gap: 3em;
+ }
+
+ footer ul li{
+    border-right: 1px solid ; 
+    padding-right: 2em;
+    font-weight: 100;
+    font-size: smaller;
+ }
+
+footer ul li{
+    width: fit-content;
 
 }
 
@@ -15,6 +30,7 @@ footer {
     font-size: 4.3vw;
 }
 
+
 .footer-black svg {
     fill: white;
     border: 1px solid white;
@@ -23,12 +39,6 @@ footer {
     margin-right: 0.5em;
 }
 
-.footer-other {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 20%;
-    width: 600px;
-}
 
 .footer-other p {
     border-right-style: solid;
