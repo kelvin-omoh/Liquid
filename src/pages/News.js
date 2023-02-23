@@ -3,6 +3,7 @@ import img1 from '../Images/blog 1.png'
 import InvestorProspectus from '../components/investorProspectus'
 import axios from "axios";
 import { useState,useEffect } from 'react';
+import { Link } from 'react-router-dom';
 export default function News() {
     const [newsData,setNewsData]=useState([])
     const [newsImg,setNewsImg]=useState([])
@@ -41,12 +42,12 @@ export default function News() {
         <div className='news-page'>
             <h1 className='news-head'>NEWS</h1>
 
-            <div className='news-container'>
+            <div className='news-container my-3'>
        
                    { newsData.map((news,id)=>(
 
-
-                <div key={id} className='news-item'>
+            <Link to={news.link}>
+                <div key={id} className='news-item my-4'>
                     <div className=' relative  '>
                         <img src={newsImg[id]}/>
                         <button className='news-btn'>NEWS</button>
@@ -56,111 +57,14 @@ export default function News() {
                         <h3>{news.title}</h3>
                         
                         <hr/>
-                        <p>GLOBAL FINANCE -{news.pubDate }</p>
+                        <p>GLOBAL FINANCE </p>
                     </div>
                 </div>
+            </Link>
+                
                    ))
                     
                    }
-                
-
-
-                <div className='news-item'>
-                    <div className=''>
-                        <img src={img1}/>
-                        <button className='news-btn'>NEWS</button>
-                        <span className='news-L'>L</span>
-                    </div>
-                    <div className='news-text'>
-                        <h3>THE MOST DEVELOPED OPPORTUNITY ZONES IN TEXAS</h3>
-                        <p>Which Opportunity Zones in Texas have seen the most
-                            investment? Let's look at the five most developed Opportunity Zones in Texas.
-                        </p>
-                        <hr/>
-                        <p>GLOBAL FINANCE - 02/13/2023</p>
-                    </div>
-                </div>
-
-                <div className='news-item'>
-                    <div className='news-img'>
-                        {/* <img src={img1}/> */}
-                        <button className='news-btn'>NEWS</button>
-                        <span className='news-L'>L</span>
-                    </div>
-                    <div className='news-text'>
-                        <h3>THE MOST DEVELOPED OPPORTUNITY ZONES IN TEXAS</h3>
-                        <p>Which Opportunity Zones in Texas have seen the most
-                            investment? Let's look at the five most developed Opportunity Zones in Texas.
-                        </p>
-                        <hr/>
-                        <p>GLOBAL FINANCE - 02/13/2023</p>
-                    </div>
-                </div>
-
-                <div className='news-item'>
-                    <div className='news-img'>
-                        {/* <img src={img1}/> */}
-                        <button className='news-btn'>NEWS</button>
-                        <span className='news-L'>L</span>
-                    </div>
-                    <div className='news-text'>
-                        <h3>THE MOST DEVELOPED OPPORTUNITY ZONES IN TEXAS</h3>
-                        <p>Which Opportunity Zones in Texas have seen the most
-                            investment? Let's look at the five most developed Opportunity Zones in Texas.
-                        </p>
-                        <hr/>
-                        <p>GLOBAL FINANCE - 02/13/2023</p>
-                    </div>
-                </div>
-
-                <div className='news-item'>
-                    <div className='news-img'>
-                        {/* <img src={img1}/> */}
-                        <button className='news-btn'>NEWS</button>
-                        <span className='news-L'>L</span>
-                    </div>
-                    <div className='news-text'>
-                        <h3>THE MOST DEVELOPED OPPORTUNITY ZONES IN TEXAS</h3>
-                        <p>Which Opportunity Zones in Texas have seen the most
-                            investment? Let's look at the five most developed Opportunity Zones in Texas.
-                        </p>
-                        <hr/>
-                        <p>GLOBAL FINANCE - 02/13/2023</p>
-                    </div>
-                </div>
-
-                <div className='news-item'>
-                    <div className='news-img'>
-                        {/* <img src={img1}/> */}
-                        <button className='news-btn'>NEWS</button>
-                        <span className='news-L'>L</span>
-                    </div>
-                    <div className='news-text'>
-                        <h3>THE MOST DEVELOPED OPPORTUNITY ZONES IN TEXAS</h3>
-                        <p>Which Opportunity Zones in Texas have seen the most
-                            investment? Let's look at the five most developed Opportunity Zones in Texas.
-                        </p>
-                        <hr/>
-                        <p>GLOBAL FINANCE - 02/13/2023</p>
-                    </div>
-                </div>
-
-                <div className='news-item'>
-                    <div className='news-img'>
-                        {/* <img src={img1}/> */}
-                        <button className='news-btn'>NEWS</button>
-                        <span className='news-L'>L</span>
-                    </div>
-                    <div className='news-text'>
-                        <h3>THE MOST DEVELOPED OPPORTUNITY ZONES IN TEXAS</h3>
-                        <p>Which Opportunity Zones in Texas have seen the most
-                            investment? Let's look at the five most developed Opportunity Zones in Texas.
-                        </p>
-                        <hr/>
-                        <p>GLOBAL FINANCE - 02/13/2023</p>
-                    </div>
-                </div>
-
                 
             </div>
             <InvestorProspectus />
