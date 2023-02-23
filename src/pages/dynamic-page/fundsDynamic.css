@@ -1,0 +1,159 @@
+.dynamic-funds {
+
+    padding-top: 5em;
+    /* background-color: red; */
+}
+
+.dynamic-funds-head, .dynamic-funds-strategies {
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+.dynamic-funds-head {
+    display: grid;
+    grid-template-columns: auto 35%;
+    gap: 10%;
+    padding-bottom: 5em;
+}
+
+.dynamic-funds-head-description {
+    margin-top: auto;
+    text-align: justify;
+}
+
+.dynamic-funds-head-description h1 {
+    font-weight: bolder;
+    padding-top: 0.7em;
+    padding-bottom: 0.5em;
+    font-size: 3em;
+}
+
+.dynamic-funds-head-description h3 {
+    font-weight: bolder;
+    width: 70%;
+    text-align: start;
+    padding-bottom: 1em;
+}
+
+.dynamic-funds-head-terms hr {
+    border-color: black;
+}
+
+.term-properties {
+    padding-bottom: 10%;
+    padding-top: 1.6em;
+}
+
+.term-properties p {
+    text-align: justify;
+    display: flex;
+    padding-top: 0.5em;
+    padding-bottom: 0.3em;
+    padding-left: 0.5em;
+}
+
+.term-properties p > span {
+    margin-left: auto;
+}
+
+.dynamic-funds-head-terms > h1 {
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+    font-weight: bolder;
+}
+
+.dynamic-funds-head-terms > p {
+    text-align: left;
+    padding-top: 1em;
+}
+
+.dynamic-funds-head-terms button {
+    width: 100%;
+    border: 1px solid black;
+    padding: 1em 3em 1em 3em;
+    background-color: rgb(255, 196, 0);
+    font-weight: bolder;
+    margin-top: 2em;
+    font-size: 1.1em;
+}
+
+/* DIFFERENT SECTION */
+.dynamic-funds-strategies {
+    background-color: #EEEEEE;
+    text-align: left;
+    /* padding-bottom: 5em; */
+}
+
+.dynamic-funds-strategies h1 {
+    padding-top: 1.6em;
+    padding-bottom: 1.6em;
+    font-weight: bolder;
+    font-size: 2.3em;
+}
+
+.strategies-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1em;
+}
+
+.strategies-item {
+    padding-bottom: 15%;
+}
+
+.strategies-item h2 {
+    font-size: 1.5em;
+    padding-bottom: 0.7em;
+    font-weight: bolder;
+}
+
+.strategies-item p {
+    letter-spacing: 1px;
+    word-spacing: 0.1px;
+    line-height: 2em;
+    font-size: 1.1em;
+}
+
+@media screen and (max-width: 770px) {
+    .dynamic-funds-head, .dynamic-funds-strategies {
+        padding-left: 8vw;
+        padding-right: 8vw;
+    }
+
+    .dynamic-funds-head {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 5em;
+    }    
+
+    .dynamic-funds-head-description {
+        padding-bottom: 5em;
+    }
+
+    .dynamic-funds-head-description h3 {
+        width: 100%;
+    }
+
+    .dynamic-funds-head-description h1 {
+        padding-top: 1.2em;
+        font-size: 2em;
+    }
+
+    .dynamic-funds-head-description p {
+        letter-spacing: 1px;
+        line-height: 1.7em;
+    }
+
+    .term-properties p {
+        padding-top: 0.9em;
+        padding-bottom: 0.6em;
+        padding-left: 0.8em;
+    }
+
+    /* DIFFERENT SECTION */
+    .strategies-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+

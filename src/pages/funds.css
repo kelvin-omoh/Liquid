@@ -53,6 +53,10 @@
     background-color: transparent;
 }
 
+.funds-plan-item button:hover {
+    background-color: rgb(255, 196, 0);
+}
+
 .funds-opportunity-zone > h1 {
     margin: 0;
     margin-top: -4px;
@@ -96,13 +100,19 @@
     padding: .4em;
 }
 
-.funds-opportunity-text button {
+.funds-opportunity-text > button {
     border: none;
     padding: 1em 3em 1em 3em;
     background-color: rgb(255, 196, 0);
     margin-top: 3%;
     font-size: 1.1em;
 }
+
+#funds-not-available {
+    color: gray;
+    pointer-events: none;
+}
+
 
 @media screen and (max-width: 1000px) {
     * {
@@ -143,6 +153,7 @@
 }
 
 @media screen and (max-width: 770px) {
+    
     .funds-plans-container {
         display: flex;
         flex-direction: column;
