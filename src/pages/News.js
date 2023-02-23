@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 export default function News() {
     const [newsData,setNewsData]=useState([])
     const [newsImg,setNewsImg]=useState([])
+    const [loading, setLoading] = useState(true);
     // const[eachNews,setEachNews]=useState("")
    
             const options = {
@@ -27,7 +28,7 @@ export default function News() {
           setNewsData(response.data.news)
         
             setNewsImg(response.data.news.map(a=>a.thumbnail?.resolutions[0]?.url))
-
+            setLoading(false);
          
           
           
@@ -41,10 +42,11 @@ export default function News() {
     return (
         <div className='news-page'>
             <h1 className='news-head'>NEWS</h1>
-
+              
             <div className='news-container my-3'>
-       
-                   { newsData.map((news,id)=>(
+        {loading ? <div className='text-center'>Loading...</div>:  <>
+        
+        { newsData.map((news,id)=>(
 
             <Link to={news.link}>
                 <div key={id} className='news-item my-4'>
@@ -65,7 +67,11 @@ export default function News() {
                    ))
                     
                    }
-                
+        </>
+                   
+              
+            }
+
             </div>
             <InvestorProspectus />
         </div>
