@@ -8,6 +8,7 @@ import News from './pages/News';
 import Tracts from './pages/Tracts';
 import Footer from './components/footer';
 import Navbar from './components/navbar';
+import FundsDynamic from './pages/dynamic-page/fundsDynamic';
 
 function App() {
   return (
@@ -18,9 +19,11 @@ function App() {
           <Route path='/' element={<Home />}></Route>
           <Route path='/about' element={<About />}></Route>
           <Route path='/funds' element={<Funds />}></Route>
+          <Route path='/funds/:data' element={<FundsDynamic />}> </Route> {/* Uses Dynamic Routing */}
           <Route path='/investors' element={<Investors />}></Route>
           <Route path='/news' element={<News />}></Route>
           <Route path='/tracts' element={<Tracts />}></Route>
+            {/* <Route path=''></Route> */}
         </Routes>
       </div>
       <Footer />

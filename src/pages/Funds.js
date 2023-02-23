@@ -3,8 +3,17 @@ import blog1 from '../Images/liquid-qof-II-opportunity-zone-fund.jpg';
 import blog2 from '../Images/lunar-investment-fund.jpg';
 import blog3 from '../Images/2020-annual-returns.jpg';
 import InvestorProspectus from '../components/investorProspectus'
+import { useNavigate } from 'react-router';
+import { Link } from 'react-router-dom';
+// import { Query } from '@testing-library/react';
+// // import { query } from 'express';
+// // import { json } from 'body-parser';
 
 export default function Funds() {
+
+    const navigateTo = useNavigate()
+   
+    
     return (
         <div className='funds-page'>
             <h1 className='funds-head'>INVESTMENTS FUNDS</h1>
@@ -31,7 +40,13 @@ export default function Funds() {
 
                     </ul>
 
-                    <button>Learn More</button>
+                    {/* <button><Link to={{
+                        pathname: '/funds/qof II',
+                        query: {
+                            comments: lunarFundData
+                        }    
+                    }}></Link>Learn More</button> */}
+                    <button onClick={() => navigateTo(`/funds/qof-II`)}>Learn More</button>
                 </div>
                 <div className='funds-plan-item'>
                     <h1 className="my-14">Lunar</h1>
@@ -48,11 +63,11 @@ export default function Funds() {
                         <li> Dividend Re-Investment</li>
                         <li> 90/10 Revenue Split</li>
                         <li> 2% AUM Fee</li>
-                        <li> Open-Ended</li>
+                         <li> Open-Ended</li>
 
                     </ul>
 
-                    <button>Learn More</button>
+                    <button onClick={() => navigateTo(`/funds/Lunar`)} >Learn More</button>
                 </div>
                 <div className='funds-plan-item'>
                     <h1 className="my-14 text-gray-400">QOF I</h1>
@@ -73,7 +88,7 @@ export default function Funds() {
 
                     </ul>
 
-                    <button>Learn More</button>
+                    <button onClick={() => navigateTo(`/funds/qof-I`)} >Learn More</button>
                 </div>
             </div>
 
