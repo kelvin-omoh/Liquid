@@ -1,4 +1,3 @@
-
 /* HERO SECTION */
 .hero-container > img {
     height: 40em;
@@ -15,7 +14,7 @@
     position: absolute;
     top: 35%;
     /* left: 20%; */
-    text-align: justify;
+    text-align: left;
     margin-left: 25%;
     color: white;
 }
@@ -37,6 +36,8 @@
 
 .fund-news > h2 {
     margin-top: 5%;
+    font-size: 2em;
+    margin-bottom: 0.8em;
 }
 
 .fund-news-container {
@@ -69,25 +70,27 @@
 }
 
 .fund-news-text {
-    text-align: justify;
-    padding-top: 1.2em;
+    text-align: left;
+    padding-top: 2em;
     /* background-color: red; */
 }
 
 .fund-news-text h3 {
-    font-size: clamp(0.6em, 1vw, 1.1em);
+    font-size: clamp(1em, 1.3vw, 1.3em);
+    font-weight: bolder;
     padding-left: 7%;
     padding-right: 7%;
     padding-bottom: 8%;
 }
 
 .fund-news-text p {
-    font-size: clamp(0.8em, 1.2vw, 1.1em);
+    font-size: clamp(1.1em, 1.2vw, 1.3em);
     font-weight: 300;
     line-height: 1.5em;
+    padding-top: 1em;
     padding-left: 7%;
     padding-right: 7%;
-    padding-bottom: 0.6em;
+    padding-bottom: 1em;
 }
 
 .fund-news-btn {
@@ -172,10 +175,10 @@
 
 @media screen and (max-width: 930px) {
 
-    .fund-news-text h3 {
+    /* .fund-news-text h3 {
         font-size: 0.8em;
     }
-    
+     */
     .fund-news-container {
         width: 80vw;
         grid-template-columns: auto auto;
@@ -186,7 +189,6 @@
     .hero-texts {
         top: 25%;
         /* left: 20%; */
-        text-align: justify;
         margin-left: 10%;
         width: 75%;
     }
@@ -196,10 +198,10 @@
         margin-bottom: 20%;
     }
 
-    .fund-news-text h3 {
+    /* .fund-news-text h3 {
         font-size: 0.8em;
         padding-bottom: 3%;
-    }
+    } */
 
     .fund-news-item .news-img {
         position: relative;

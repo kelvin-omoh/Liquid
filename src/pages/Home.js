@@ -3,8 +3,21 @@ import heroImg from '../Images/Hero Img.png'
 import img3 from '../Images/blog 1.png'
 import InvestorProspectus from '../components/investorProspectus'
 import { Link } from 'react-router-dom'
+import { useContext } from 'react'
+import { AppContext } from '../components/AppContext'
+import LoadingSpinner from '../components/LoadingSpinner'
 
 export default function Home() {
+
+    const {newsData, newsImg, loading} = useContext(AppContext)
+    let firstThree = []
+
+    if (loading == false) {
+        for(let i = 1; i <= 3; i++){
+            firstThree.push(newsData[i])
+        }
+    }
+
     return (
         <div className="home-page">
 
@@ -23,46 +36,33 @@ export default function Home() {
             <div className='fund-news'>
                 <h2>OZ FUND NEWS</h2>
 
-                <div className='fund-news-container'>
-                    <div className='fund-news-item'>
-                        <div className='news-img'>
-                            {/* <img src={img1}/> */}
-                            <button className='fund-news-btn'>NEWS</button>
-                            <span className='fund-news-L'>L</span>
+                {
+                    loading ?
+                        <LoadingSpinner />
+                    :
+                    <>
+                        <div className='fund-news-container'>
+                            {firstThree.map((news,id) => (
+                                <Link to={news.link}>
+                                    <div key={id} className='news-item my-4'>
+                                        <div className=' relative  '>
+                                            <img src={newsImg[id]}/>
+                                            <button className='news-btn'>NEWS</button>
+                                            <span className='news-L absolute  m-3'>G.F</span>
+                                        </div>
+                                        <div className='fund-news-text'>
+                                            <h3>{news.title.substring(0,40)} <span style={{color: 'orange'}}>...Read more</span></h3>
+                                            
+                                            <hr/>
+                                            <p>GLOBAL FINANCE </p>
+                                        </div>
+                                    </div>
+                                </Link>
+                            ))}
                         </div>
-                        <div className='fund-news-text'>
-                            <h3>THE MOST DEVELOPED OPPORTUNITY ZONES IN TEXAS</h3>
-                            <hr/>
-                            <p>GLOBAL FINANCE - 02/13/2023</p>
-                        </div>
-                    </div>
+                    </>
+                }
 
-                    <div className='fund-news-item'>
-                        <div className='news-img'>
-                            {/* <img src={img1}/> */}
-                            <button className='fund-news-btn'>NEWS</button>
-                            <span className='fund-news-L'>L</span>
-                        </div>
-                        <div className='fund-news-text'>
-                            <h3>THE MOST DEVELOPED OPPORTUNITY ZONES IN TEXAS</h3>
-                            <hr/>
-                            <p>GLOBAL FINANCE - 02/13/2023</p>
-                        </div>
-                    </div>
-
-                    <div className='fund-news-item'>
-                        <div className='news-img'>
-                            {/* <img src={img1}/> */}
-                            <button className='fund-news-btn'>NEWS</button>
-                            <span className='fund-news-L'>L</span>
-                        </div>
-                        <div className='fund-news-text'>
-                            <h3>THE MOST DEVELOPED OPPORTUNITY ZONES IN TEXAS</h3>
-                            <hr/>
-                            <p>GLOBAL FINANCE - 02/13/2023</p>
-                        </div>
-                    </div>
-                    </div>
             </div>
 
             <InvestorProspectus />
