@@ -69,7 +69,7 @@ export default function Funds() {
 
                     <button onClick={() => navigateTo(`/funds/Lunar`)} >Learn More</button>
                 </div>
-                <div className='funds-plan-item'>
+                <div className='funds-plan-item' id='funds-not-available'>
                     <h1 className="my-14 text-gray-400">QOF I</h1>
                     <h2 className='text-[1.9em] my-4'>Opportunity Zone Fund</h2>
 
@@ -88,7 +88,7 @@ export default function Funds() {
 
                     </ul>
 
-                    <button onClick={() => navigateTo(`/funds/qof-I`)} >Learn More</button>
+                    <button onClick={() => navigateTo(`/funds/qof-I`)} >Funds Closed</button>
                 </div>
             </div>
 

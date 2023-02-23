@@ -184,7 +184,7 @@
 
 @media screen and (max-width: 770px) {
     .hero-texts {
-        top: 35%;
+        top: 25%;
         /* left: 20%; */
         text-align: justify;
         margin-left: 10%;

@@ -108,6 +108,11 @@
     font-size: 1.1em;
 }
 
+#funds-not-available {
+    color: gray;
+    pointer-events: none;
+}
+
 
 @media screen and (max-width: 1000px) {
     * {
