@@ -102,10 +102,10 @@ export default function Funds() {
                     <div className='funds-opportunity-text'>
                         <h1>OZ Fund</h1>
                         <p>
-                        GLOBAL FINANCE QOF II is our primary opportunity zone investment fund structured to provide
-                            income investors with tax-free capital gains on the growth of our Austin-based startup business portfolio.
+                            Liquid QOF II is our primary opportunity zone investment fund
+                            structured to provide income investors with tax-free capital gains on the growth of our Austin-based startup business portfolio.
                         </p>
-                        <button>More On GLOBAL FINANCE QOF II</button>
+                        <button onClick={() => navigateTo(`/funds/qof-II`)} >More On Liquid QOF II </button>
                     </div>
                 </div>
 
@@ -115,7 +115,7 @@ export default function Funds() {
                         <h1>Blockchain Fund</h1>
                         <p>
                         Lunar Fund is a cryptocurrency vehicle created to give accredited investors exposure to the world’s fastest appreciating asset class. The benefits of crypto appreciation without the risk of centralized counter-parties. Learn more today.  </p>
-                        <button>More On Lunar</button>
+                        <button onClick={() => navigateTo(`/funds/Lunar`)} >More On Lunar</button>
                     </div>
                     <img src={blog2}/>
                 </div>
@@ -128,9 +128,9 @@ export default function Funds() {
                     <div className='funds-opportunity-text'>
                         <h1>Austin, TX</h1>
                         <p>
-                        “The median list price for homes in the Austin area was up 24%, year-over-year, as of December 2020 — the largest increase amongst the nation’s 50 largest markets.” – BizJournals.com
+                            “The median list price for homes in the Austin area was up 24%, year-over-year, as of December 2020 — the largest increase amongst the nation’s 50 largest markets.” – BizJournals.com
                         </p>
-                        <button>Investor Prospectus</button>
+                        <button onClick={() => navigateTo(`/investors`)} >Investor Prospectus</button>
                     </div>
                 </div>
 
@@ -140,9 +140,9 @@ export default function Funds() {
                     <div className='funds-opportunity-text'>
                         <h1>Identified Tracts</h1>
                         <p>
-                        The Liquid Fund is ready to deploy capital into carefully chosen opportunity zone tracts in Austin, TX. These tracts include East St Elmo, Montopolis, East Oltorf and Parker Lane.
+                            The Liquid Fund is ready to deploy capital into carefully chosen opportunity zone tracts in Austin, TX. These tracts include East St Elmo, Montopolis, East Oltorf and Parker Lane.
                         </p>
-                        <button>More About Tracts</button>
+                        <button onClick={() => navigateTo(`/tracts`)} >More About Tracts</button>
                     </div>
                     <img src={blog1}/>
                 </div>
