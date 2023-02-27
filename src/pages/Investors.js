@@ -1,9 +1,106 @@
 import './investor.css'
-
+import React, { useEffect, useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import {  createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from '../Firebase';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
 export default function Investors() {
+const navigate=useNavigate() 
+
+const [email,setEmail]=useState("")
+const[firstName,setFirstName]=useState("")
+const[secondname,setSecondName]=useState("")
+const [amount, setAmount] = useState("")
+const[PhoneNumber,setPhoneNumber]=useState("")
+const [password,setPassword]=useState("")
+const [errrors,seterrors]=useState("")
+
+    const handleSubmit= (e)=>{
+   
+        e.preventDefault()
+       //  alert()
+      
+         
+     
+        
+         toast.success('Your prospectus request has been sent !', {
+           position: "top-right",
+           autoClose: 5000,
+           hideProgressBar: false,
+           closeOnClick: true,
+           pauseOnHover: true,
+           draggable: true,
+           progress: undefined,
+           theme: "dark",
+           });
+        //  navigate("/white")
+        
+         // ...
+       
+     
+     } 
+     
+
+
+
+
+  const handleLogin= (e)=>{
+   
+    e.preventDefault()
+   //  alert()
+  
+     
+   e.preventDefault()
+   signInWithEmailAndPassword(auth, email, password)
+   .then((userCredential) => {
+     // Signed in 
+     toast.success('login succesful', {
+       position: "top-right",
+       autoClose: 5000,
+       hideProgressBar: false,
+       closeOnClick: true,
+       pauseOnHover: true,
+       draggable: true,
+       progress: undefined,
+       theme: "dark",
+       });
+     const user = userCredential.user;
+     console.log(user);
+     navigate("/white")
+    //  setislogged(true)
+
+    
+     // ...
+   })
+   .catch((error) => {
+     const errorCode = error.code;
+     const errorMessage = error.message;
+     seterrors(errorCode)
+
+   });
+}
     return (
         <div className='investor-page'>
+            
             <h1 className='investor-head'>INVESTORS</h1>
+            <div className='w-fit h-fit'>
+            <ToastContainer
+position="top-right"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="light"
+/>
+{/* Same as */}
+<ToastContainer />
+            </div>
 
             <div className='investor-request'>
                 <div className='investor-text'>
@@ -14,30 +111,34 @@ export default function Investors() {
                     </p>
                     <p className='investor-bold-text'>- Scott S. star star</p>
                 </div>
+                <form onSubmit={handleSubmit}>
+
+               
                 <div className='investor-request-form'>
                     <div className='form-names-container'>
                         <div className='form-name'>
                             <label>First Name</label>
-                            <input type={'text'} placeholder='Elon' />
+                            <input required onChange={(e)=>setFirstName(e.target.value)} type={'text'} placeholder='Elon' />
                         </div>
                         <div className='form-name'>
                             <label>Second Name</label>
-                            <input type={'text'} placeholder='Musk' />
+                            <input required onChange={(e)=>setSecondName(e.target.value)} type={'text'} placeholder='Musk' />
                         </div>
                     </div>
                     <label>Email</label>
-                    <input type={'email'} placeholder='your@email.com'/>
+                    <input required type={'email'} onChange={(e)=>setEmail(e.target.value)} placeholder='your@email.com'/>
                     <label>Phone Number</label>
-                    <input type={'number'} placeholder='(xxx) xxx-xxx '/>
+                    <input required onChange={(e)=>setPhoneNumber(e.target.value)} type={'number'} placeholder='(xxx) xxx-xxx '/>
                     <label>Expected Investment Amount</label>
-                    <input type={'number'} placeholder='$'/>
+                    <input required onChange={(e)=>setAmount(e.target.value)} type={'number'} placeholder='$'/>
                     <label>Are You An Accredited Investor</label>
-                    <select>
+                    <select className=' border-3px border-red-900'>
                         <option>Yes</option>
                         <option>No</option>
                     </select>
-                    <button>Request Prospectus</button>
-                </div>
+                    <button type='submit'>Request Prospectus</button>
+                </div> 
+                </form>
             </div>
 
             <hr/>
@@ -45,20 +146,23 @@ export default function Investors() {
             <div className='investor-login'>
 
                 <h3>Current Investors</h3>
-                
-                <div className='loginItem'>
+                <form onSubmit={handleLogin}>
+                    <div className='loginItem'>
                     <label>Email-Address</label>
-                    <input type={'text'} />
+                    <input required onChange={(e)=>setEmail(e.target.value)} type={'text'} />
                 </div>
                 <div className='loginItem'>
                     <label>Password</label>
-                    <input type={'password'} />
-                </div>
-
+                    <input required onChange={(e)=>setPassword(e.target.value)} className='border-3px border-slate-900 ' type={'password'} />
+                </div> 
                 <p>Remember Me</p>
-                <button>Log In</button>
+                <button >Log In</button>
                 <p>Lost your password? </p>
+               </form>
+               
             </div>
+           
+                
         </div>
     )
 }

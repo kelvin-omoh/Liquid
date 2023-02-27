@@ -2,7 +2,7 @@ import { createContext, useState } from "react";
 import axios from "axios";
 
 const AppContext = createContext()
-// git push origin main
+
 function ContextProvider(props) {
 
     const [newsData,setNewsData]=useState([])
@@ -10,34 +10,23 @@ function ContextProvider(props) {
     const [loading, setLoading] = useState(true);
     // const[eachNews,setEachNews]=useState("")
    
-    // const options = {
-    //     method: 'GET',
-    //     url: 'https://apidojo-yahoo-finance-v1.p.rapidapi.com/auto-complete',
-    //     params: { q:"fund",q:"invest",newsCount:13, region: 'NG'},
-    //     headers: {
-    //         'X-RapidAPI-Key': '30036a0512msh3b27f89a1503b96p158eebjsn28a37851b62b',
-    //         'X-RapidAPI-Host': 'apidojo-yahoo-finance-v1.p.rapidapi.com'
-    //     }
-    // };
-
     const options = {
         method: 'GET',
-        url: 'https://yh-finance.p.rapidapi.com/news/v2/get-details',
-        params: { q:"fund",q:"invest",uuid: '9803606d-a324-3864-83a8-2bd621e6ccbd', region: 'US'},
+        url: 'https://yahoo-finance15.p.rapidapi.com/api/yahoo/ne/news/AAPL',
         headers: {
           'X-RapidAPI-Key': '30036a0512msh3b27f89a1503b96p158eebjsn28a37851b62b',
-          'X-RapidAPI-Host': 'yh-finance.p.rapidapi.com'
+          'X-RapidAPI-Host': 'yahoo-finance15.p.rapidapi.com'
         }
       };
 
     function fetchNews() {
         console.log('fetch data')
         axios.request(options).then(function (response) {
-            console.log(response.data.news);
+            console.log(response.data.item);
             
-            setNewsData(response.data.news)
+            setNewsData(response.data.item)
             
-                setNewsImg(response.data.news.map(a=>a.thumbnail?.resolutions[0]?.url))
+                // setNewsImg(response.data.news.map(a=>a.thumbnail?.resolutions[0]?.url))
                 setLoading(false); // change TO FALSE
             
             

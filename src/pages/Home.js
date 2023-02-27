@@ -43,11 +43,11 @@ export default function Home() {
                     <>
                         <div className='fund-news-container'>
                             {firstThree.map((news,id) => (
-                                <Link to={news.link}>
+                                <Link to="/news">
                                     <div key={id} className='news-item my-4'>
                                         <div className=' relative  '>
-                                            <img src={newsImg[id]}/>
-                                            <button className='news-btn'>NEWS</button>
+                                        <img src={`https://source.unsplash.com/1600x900/?${news.title}-fund/?${news.description}-technology`}/>
+                        <button className='news-btn'>NEWS</button>
                                             <span className='news-L absolute  m-3'>G.F</span>
                                         </div>
                                         <div className='fund-news-text'>

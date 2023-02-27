@@ -9,7 +9,8 @@ import Tracts from './pages/Tracts';
 import Footer from './components/footer';
 import Navbar from './components/navbar';
 import FundsDynamic from './pages/dynamic-page/fundsDynamic';
-
+import White from './pages/White';
+import { Link } from 'react-router-dom';
 function App() {
   return (
     <div className="App">
@@ -18,11 +19,15 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />}></Route>
           <Route path='/about' element={<About />}></Route>
+          <Route path='/white' element={<White/>}></Route>
           <Route path='/funds' element={<Funds />}></Route>
           <Route path='/funds/:data' element={<FundsDynamic />}> </Route> {/* Uses Dynamic Routing */}
           <Route path='/investors' element={<Investors />}></Route>
           <Route path='/news' element={<News />}></Route>
           <Route path='/tracts' element={<Tracts />}></Route>
+          <Route path='/*' element={<div className=' h-screen flex flex-col justify-center items-center text-gray-500 text-[5em]'> <p>Oops!! 404  ERROR </p><p>(Page Doest Exist)</p>
+          <Link to="/">  <button className='bg-black p-4 text-white text-[.3em]'>back to home</button></Link>
+          </div>}></Route>
             {/* <Route path=''></Route> */}
         </Routes>
       </div>
