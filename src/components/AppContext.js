@@ -2,7 +2,7 @@ import { createContext, useState } from "react";
 import axios from "axios";
 
 const AppContext = createContext()
-
+// git push origin main
 function ContextProvider(props) {
 
     const [newsData,setNewsData]=useState([])
