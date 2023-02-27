@@ -2,47 +2,41 @@ import './news.css'
 import img1 from '../Images/blog 1.png'
 import InvestorProspectus from '../components/investorProspectus'
 import axios from "axios";
-// import { useState,useEffect } from 'react';
-import { useContext } from 'react';
-import { AppContext } from '../components/AppContext';
-import LoadingSpinner from '../components/LoadingSpinner';
+import { useState,useEffect } from 'react';
 import { Link } from 'react-router-dom';
-
 export default function News() {
-
-    const {newsData, newsImg, loading} = useContext(AppContext)
-//     const [newsData,setNewsData]=useState([])
-//     const [newsImg,setNewsImg]=useState([])
-//     const [loading, setLoading] = useState(true);
-//     // const[eachNews,setEachNews]=useState("")
+    const [newsData,setNewsData]=useState([])
+    const [newsImg,setNewsImg]=useState([])
+    const [loading, setLoading] = useState(true);
+    // const[eachNews,setEachNews]=useState("")
    
-//             const options = {
-//         method: 'GET',
-//         url: 'https://apidojo-yahoo-finance-v1.p.rapidapi.com/auto-complete',
-//         params: { q:"fund",q:"invest",newsCount:13, region: 'NG'},
-//         headers: {
-//             'X-RapidAPI-Key': '30036a0512msh3b27f89a1503b96p158eebjsn28a37851b62b',
-//             'X-RapidAPI-Host': 'apidojo-yahoo-finance-v1.p.rapidapi.com'
-//           }
-//       };
+            const options = {
+        method: 'GET',
+        url: 'https://apidojo-yahoo-finance-v1.p.rapidapi.com/auto-complete',
+        params: { q:"fund",q:"invest",newsCount:13, region: 'NG'},
+        headers: {
+            'X-RapidAPI-Key': '30036a0512msh3b27f89a1503b96p158eebjsn28a37851b62b',
+            'X-RapidAPI-Host': 'apidojo-yahoo-finance-v1.p.rapidapi.com'
+          }
+      };
 
-//  useEffect(() => {
+ useEffect(() => {
       
-//       axios.request(options).then(function (response) {
-//           console.log(response.data.news);
+      axios.request(options).then(function (response) {
+          console.log(response.data.news);
           
-//           setNewsData(response.data.news)
+          setNewsData(response.data.news)
         
-//             setNewsImg(response.data.news.map(a=>a.thumbnail?.resolutions[0]?.url))
-//             setLoading(false);
+            setNewsImg(response.data.news.map(a=>a.thumbnail?.resolutions[0]?.url))
+            setLoading(false);
          
           
           
-//       }).catch(function (error) {
-//           console.error(error);
-//       });
+      }).catch(function (error) {
+          console.error(error);
+      });
 
-//     },[]);
+    },[]);
    
 
     return (
@@ -50,10 +44,7 @@ export default function News() {
             <h1 className='news-head'>NEWS</h1>
               
             <div className='news-container my-3'>
-        {loading ?
-            <div className='text-center'>
-                <LoadingSpinner />
-            </div>:  <>
+        {loading ? <div className='text-center'>Loading...</div>:  <>
         
         { newsData.map((news,id)=>(
 

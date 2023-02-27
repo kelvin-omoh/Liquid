@@ -10,15 +10,25 @@ function ContextProvider(props) {
     const [loading, setLoading] = useState(true);
     // const[eachNews,setEachNews]=useState("")
    
+    // const options = {
+    //     method: 'GET',
+    //     url: 'https://apidojo-yahoo-finance-v1.p.rapidapi.com/auto-complete',
+    //     params: { q:"fund",q:"invest",newsCount:13, region: 'NG'},
+    //     headers: {
+    //         'X-RapidAPI-Key': '30036a0512msh3b27f89a1503b96p158eebjsn28a37851b62b',
+    //         'X-RapidAPI-Host': 'apidojo-yahoo-finance-v1.p.rapidapi.com'
+    //     }
+    // };
+
     const options = {
         method: 'GET',
-        url: 'https://apidojo-yahoo-finance-v1.p.rapidapi.com/auto-complete',
-        params: { q:"fund",q:"invest",newsCount:13, region: 'NG'},
+        url: 'https://yh-finance.p.rapidapi.com/news/v2/get-details',
+        params: { q:"fund",q:"invest",uuid: '9803606d-a324-3864-83a8-2bd621e6ccbd', region: 'US'},
         headers: {
-            'X-RapidAPI-Key': '30036a0512msh3b27f89a1503b96p158eebjsn28a37851b62b',
-            'X-RapidAPI-Host': 'apidojo-yahoo-finance-v1.p.rapidapi.com'
+          'X-RapidAPI-Key': '30036a0512msh3b27f89a1503b96p158eebjsn28a37851b62b',
+          'X-RapidAPI-Host': 'yh-finance.p.rapidapi.com'
         }
-    };
+      };
 
     function fetchNews() {
         console.log('fetch data')

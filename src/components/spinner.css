@@ -22,7 +22,7 @@
 
 .spinner-text {
     position: absolute;
-    right: -3em;
+    /* right: -3em; */
 }
 
 .loading-spinner {
