@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 
 export default function News() {
 
-    const {newsData, newsImg, loading} = useContext(AppContext)
+    const {newsData, newsImg, loading, error} = useContext(AppContext)
 //     const [newsData,setNewsData]=useState([])
 //     const [newsImg,setNewsImg]=useState([])
 //     const [loading, setLoading] = useState(true);
@@ -52,13 +52,13 @@ export default function News() {
             <div className='news-container my-3'>
         {loading ?
             <div className='text-center'>
-                <LoadingSpinner />
+                <LoadingSpinner errorOccured={error}/>
             </div>:  <>
         
         { newsData.map((news,id)=>(
          
 
-            <Link to={news.link}>
+            <Link to={`/news/${news.guid}`}>
                 <div key={id} className='news-item my-4'>
                     <div className=' relative  '>
                         <img src={`https://source.unsplash.com/1600x900/?${news.title}-fund/?${news.description}-technology`}/>

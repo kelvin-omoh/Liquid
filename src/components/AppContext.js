@@ -8,6 +8,7 @@ function ContextProvider(props) {
     const [newsData,setNewsData]=useState([])
     const [newsImg,setNewsImg]=useState([])
     const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(false)
     // const[eachNews,setEachNews]=useState("")
    
     const options = {
@@ -32,6 +33,7 @@ function ContextProvider(props) {
             
             
         }).catch(function (error) {
+            setError(true)
             console.error(error);
         });
     }
@@ -40,7 +42,7 @@ function ContextProvider(props) {
     newsData.length <= 1 && fetchNews()
 
     return (
-        <AppContext.Provider value={{newsData, newsImg, loading}}>
+        <AppContext.Provider value={{newsData, newsImg, loading, error}}>
             {props.children}
         </AppContext.Provider>
     )

@@ -6,10 +6,11 @@ import { Link } from 'react-router-dom'
 import { useContext } from 'react'
 import { AppContext } from '../components/AppContext'
 import LoadingSpinner from '../components/LoadingSpinner'
+// import { useNavigate } from 'react-router-dom'
 
 export default function Home() {
 
-    const {newsData, newsImg, loading} = useContext(AppContext)
+    const {newsData, newsImg, loading, error} = useContext(AppContext)
     let firstThree = []
 
     if (loading == false) {
@@ -38,12 +39,12 @@ export default function Home() {
 
                 {
                     loading ?
-                        <LoadingSpinner />
+                        <LoadingSpinner errorOccured={error}/>
                     :
                     <>
                         <div className='fund-news-container'>
                             {firstThree.map((news,id) => (
-                                <Link to="/news">
+                                <Link to={`/news/${news.guid}`}>
                                     <div key={id} className='news-item my-4'>
                                         <div className=' relative  '>
                                         <img src={`https://source.unsplash.com/1600x900/?${news.title}-fund/?${news.description}-technology`}/>
