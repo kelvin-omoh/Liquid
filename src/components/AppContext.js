@@ -13,10 +13,11 @@ function ContextProvider(props) {
    
     const options = {
         method: 'GET',
-        url: 'https://yahoo-finance15.p.rapidapi.com/api/yahoo/ne/news/AAPL',
+        url: 'https://mboum-finance.p.rapidapi.com/ne/news/',
+        params: {symbol: 'AAPL,MSFT'},
         headers: {
           'X-RapidAPI-Key': '30036a0512msh3b27f89a1503b96p158eebjsn28a37851b62b',
-          'X-RapidAPI-Host': 'yahoo-finance15.p.rapidapi.com'
+          'X-RapidAPI-Host': 'mboum-finance.p.rapidapi.com'
         }
       };
 

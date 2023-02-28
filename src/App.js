@@ -15,6 +15,7 @@ import PrivacyPolicy from './pages/Privacy-policy';
 import TermsOfService from './pages/Terms-of-service';
 import { Link } from 'react-router-dom';
 
+import FAQ from './pages/FAQ';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path='/funds' element={<Funds />}></Route>
           <Route path='/funds/:data' element={<FundsDynamic />}> </Route> {/* Uses Dynamic Routing */}
           <Route path='/investors' element={<Investors />}></Route>
+          <Route path='/faq' element={<FAQ />}></Route>
           <Route path='/news' element={<News />}></Route>
           <Route path='/news/:newsId' element={<SingleNews />}></Route>
           <Route path='/tracts' element={<Tracts />}></Route>

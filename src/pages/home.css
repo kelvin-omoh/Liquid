@@ -2,6 +2,7 @@
 .hero-container > img {
     height: 40em;
     width: 100%;
+    filter: contrast(0.9);
 }
 
 .hero-container {
@@ -16,7 +17,7 @@
     /* left: 20%; */
     text-align: left;
     margin-left: 25%;
-    color: white;
+    color: rgb(6, 6, 6);
 }
 .hero-texts > h1 {
     font-weight: 1;
@@ -27,9 +28,9 @@
 .hero-btn button {
     padding: 1.1em 3.8em;
     margin-right: 1em;
-    border: 1px solid white;
+    border: 1px solid rgb(8, 8, 8);
     background-color: transparent;
-    color: white;
+    color: rgb(6, 5, 5);
 }
 
 /* FUND NEWS */
@@ -144,8 +145,9 @@
 }
 
 .oz-texts p {
-    font-weight: lighter;
+    font-weight:100;
     line-height: 1.6;
+    line-height: 2.2em;
 }
 
 .oz-texts button {
@@ -160,7 +162,8 @@
 }
 
 .oz-texts > h1 {
-    font-size: clamp(1.6em, 2.5vw, 2.2em);
+
+    font-weight: 900;
 }
 
 .oz-img {

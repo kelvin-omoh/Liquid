@@ -45,9 +45,10 @@
     border: 1px solid black;
     /* background-color: transparent; */
     font-weight: bolder;
+    font-size: larger;
     cursor: pointer;
     /* background-color: rgb(3, 36, 65); */
-    border-radius: 12px;
+    /* border-radius: 12px; */
     font-size: 20x;
     color: rgb(9, 1, 1); /* CHANGE*/
 }
