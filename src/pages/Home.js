@@ -13,7 +13,7 @@ export default function Home() {
     const {newsData, newsImg, loading, error} = useContext(AppContext)
 
 
-    const {newsData, newsImg, loading} = useContext(AppContext)
+    // const {newsData, newsImg, loading} = useContext(AppContext)
 
     let firstThree = []
 
@@ -50,10 +50,6 @@ export default function Home() {
                             {firstThree.map((news,id) => (
 
                                 <Link to={`/news/${news.guid}`}>
-
-                             
-
-                                <Link to="/news">
 
                                     <div key={id} className='news-item my-4'>
                                         <div className=' relative  '>
