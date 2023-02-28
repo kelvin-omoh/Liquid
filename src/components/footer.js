@@ -24,13 +24,8 @@ export default function Footer() {
             <div className='footer-other md:ml-[20%] p-5  flex flex-col  '>
                 <ul className=' flex flex-col md:flex-row'>
                     <li>Reports</li>
-
                     <li onClick={() => navigateTo('/terms-of-service')}>Terms of Service</li>
                     <li onClick={() => navigateTo('/privacy-policy')} >Privacy Policy</li>
-                    <li>Frequently Asked Questions</li>
-
-                    <li>Terms of Service</li>
-                    <li>Provacy Policy</li>
                     <li><Link to="/faq">Frequently Asked Questions</Link></li>
 
                 </ul>
