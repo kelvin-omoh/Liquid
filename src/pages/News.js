@@ -61,7 +61,7 @@ export default function News() {
             <Link to={news.link}>
                 <div key={id} className='news-item my-4'>
                     <div className=' relative  '>
-                        <img src={`https://source.unsplash.com/1600x900/?${news.title}-fund/?${news.description}-technology`}/>
+                    <img src={`https://source.unsplash.com/1600x900/?$${news.title}  -technology `}/>                  
                         {/* <img src={`https://pixabay.com/api/?key=33987218-71374b5bf9d4f9b8fee9caa6f&q={${news.title}}&image_type=photo&per_page=1&min_width=1600&min_height=900`}/> */}
                         <button className='news-btn'>NEWS</button>
                         <span className='news-L absolute  m-3'>G.F</span>

@@ -1,6 +1,6 @@
 import './home.css'
-import heroImg from '../Images/Hero Img.png'
-import img3 from '../Images/blog 1.png'
+import heroImg from '../Images/liquid-investment-funds-jpg (5).webp'
+import img3 from '../Images/2020-annual-returns.jpg'
 import InvestorProspectus from '../components/investorProspectus'
 import { Link } from 'react-router-dom'
 import { useContext } from 'react'
@@ -8,6 +8,7 @@ import { AppContext } from '../components/AppContext'
 import LoadingSpinner from '../components/LoadingSpinner'
 
 export default function Home() {
+
 
     const {newsData, newsImg, loading} = useContext(AppContext)
     let firstThree = []
@@ -23,8 +24,8 @@ export default function Home() {
 
             <div className='hero-container'>
                 <img src={heroImg}></img>
-                <div className='hero-texts'>
-                    <h1>GLOBAL FINANCE Investments</h1>
+                <div className='hero-texts flex flex-col gap-3 md:gap-6 '>
+                    <h1 className=''>GLOBAL FINANCE Investments</h1>
                     <p>Diversified Opportunity Zone And Blockchain Funds</p>
                     <div className='hero-btn'>
                         <Link to='/funds'><button>Learn More</button></Link>
@@ -43,11 +44,13 @@ export default function Home() {
                     <>
                         <div className='fund-news-container'>
                             {firstThree.map((news,id) => (
+                             
+
                                 <Link to="/news">
                                     <div key={id} className='news-item my-4'>
                                         <div className=' relative  '>
-                                        <img src={`https://source.unsplash.com/1600x900/?${news.title}-fund/?${news.description}-technology`}/>
-                        <button className='news-btn'>NEWS</button>
+                                        <img src={`https://source.unsplash.com/1600x900/?$${news.title}  -technology `}/>
+                                           <button className='news-btn'>NEWS</button>
                                             <span className='news-L absolute  m-3'>G.F</span>
                                         </div>
                                         <div className='fund-news-text'>
@@ -67,9 +70,9 @@ export default function Home() {
 
             <InvestorProspectus />
 
-            <div className='oz-funds'>
-                <div className='oz-texts'>
-                    <h1>AUSTIN OZ FUNDS</h1>
+            <div className='oz-funds  flex flex-col my-[4em]'>
+                <div className='oz-texts '>
+                    <h1 className=' text-[1.5em] md:text-[2em]'>AUSTIN OZ FUNDS</h1>
                     <p>Opportunity Zone Funds in Austin, Texas are investment vehicles that provide
                         tax incentives to developers and investors who invest in economically-distressed communities.
                         These funds aim to stimulate economic growth and job creation in areas that have been designated as Opportunity Zones by the government. 

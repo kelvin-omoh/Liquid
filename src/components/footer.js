@@ -1,6 +1,6 @@
 // import facebook from './icons/facebook-logo-24.png'
+import { Link } from 'react-router-dom'
 import './footer.css'
-
 export default function Footer() {
     return (
         <footer className=' flex flex-col    justify-center' >
@@ -20,7 +20,7 @@ export default function Footer() {
                     <li>Reports</li>
                     <li>Terms of Service</li>
                     <li>Provacy Policy</li>
-                    <li>Frequently Asked Questions</li>
+                    <li><Link to="/faq">Frequently Asked Questions</Link></li>
                 </ul>
               
             </div>

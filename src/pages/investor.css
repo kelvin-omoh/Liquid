@@ -50,7 +50,7 @@
     width: 100%;
 }
 
-.investor-request-form input,.investor-login input {
+.investor-request-form input,.investor-login input  {
     padding: 1em 0em 1em 0.5em;    
     border: 1px solid gray;
 }
