@@ -10,7 +10,10 @@ import LoadingSpinner from '../components/LoadingSpinner'
 export default function Home() {
 
 
+
     const {newsData, newsImg, loading} = useContext(AppContext)
+    // const {newsData, newsImg, loading} = useContext(AppContext)
+
     let firstThree = []
 
     if (loading == false) {
@@ -44,9 +47,14 @@ export default function Home() {
                     <>
                         <div className='fund-news-container'>
                             {firstThree.map((news,id) => (
+
                              
 
-                                <Link to="/news">
+
+
+                                <Link to={`/news/${news.guid}`}>
+
+
                                     <div key={id} className='news-item my-4'>
                                         <div className=' relative  '>
                                         <img src={`https://source.unsplash.com/1600x900/?$${news.title}  -technology `}/>
@@ -91,5 +99,6 @@ export default function Home() {
                 </div>
             </div>
         </div>
+      
     )
 }
