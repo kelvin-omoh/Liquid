@@ -5,12 +5,13 @@ footer {
     gap: 3em;
  }
 
- footer ul li{
+footer ul li{
     border-right: 1px solid ; 
     padding-right: 2em;
     font-weight: 100;
     font-size: smaller;
- }
+    cursor: pointer;
+}
 
 footer ul li{
     width: fit-content;
