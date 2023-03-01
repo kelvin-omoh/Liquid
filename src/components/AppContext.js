@@ -9,6 +9,7 @@ function ContextProvider(props) {
     const [newsImg,setNewsImg]=useState([])
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false)
+    const [loggedIn, setLoggedIn] = useState(false)
     // const[eachNews,setEachNews]=useState("")
    
     
@@ -17,10 +18,17 @@ function ContextProvider(props) {
     function fetchNews() {
         console.log('fetch data')
         axios.get(url).then(function (response) {
-            console.log(response.data.articles);
+            // console.log(response.data.articles);
             
-            setNewsData(response.data.articles)
-            console.log(newsData);
+            let truncatedData = []
+
+            for (let i = 0; i <= 15; i++) {
+                truncatedData.push(response.data.articles[i])
+            }
+
+            console.log(truncatedData)
+            setNewsData(truncatedData)
+            // console.log(newsData);
                 // setNewsImg(response.data.articles.urlToImage)
                 // console.log(newsImg,777);
                 setLoading(false); // change TO FALSE
@@ -37,7 +45,7 @@ function ContextProvider(props) {
     newsData.length <= 1 && fetchNews()
 
     return (
-        <AppContext.Provider value={{newsData, newsImg, loading, error}}>
+        <AppContext.Provider value={{newsData, newsImg, loading, error, loggedIn, setLoggedIn}}>
             {props.children}
         </AppContext.Provider>
     )
