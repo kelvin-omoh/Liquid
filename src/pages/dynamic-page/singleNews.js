@@ -11,11 +11,14 @@ export default function SingleNews () {
 
     // check if the data has loaded from API
     if (!loading) {
-        // console.log(newsId)
-
+        console.log(newsId.replace("/%20/", ' '))
+        // newsId=newsId.replace("/%20/", ' ')
+        console.log(newsId)
         // To get current single News Item data form context using the news ID gotten from url parameter
-        const currentNews = newsData.filter(data => data.guid == newsId)
+        console.log(newsData);
 
+        const currentNews = newsData.filter((data) => data.title === newsId)
+      
         // To check if the news Exist
         if (currentNews.length === 0) {
             return (

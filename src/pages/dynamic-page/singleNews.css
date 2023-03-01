@@ -5,6 +5,7 @@
 .singleNews-header-container > img {
     height: 40em;
     width: 100%;
+    object-fit: cover;
 }
 
 .singleNews-header-text {

@@ -11,24 +11,18 @@ function ContextProvider(props) {
     const [error, setError] = useState(false)
     // const[eachNews,setEachNews]=useState("")
    
-    const options = {
-        method: 'GET',
-        url: 'https://mboum-finance.p.rapidapi.com/ne/news/',
-        params: {symbol: 'AAPL,MSFT'},
-        headers: {
-          'X-RapidAPI-Key': '30036a0512msh3b27f89a1503b96p158eebjsn28a37851b62b',
-          'X-RapidAPI-Host': 'mboum-finance.p.rapidapi.com'
-        }
-      };
+    
+      const url =`https://newsapi.org/v2/everything?q=finance+technology+money&apiKey=1f7e0a872316481f9dbe8cd016a43eb9`;
 
     function fetchNews() {
         console.log('fetch data')
-        axios.request(options).then(function (response) {
-            console.log(response.data.item);
+        axios.get(url).then(function (response) {
+            console.log(response.data.articles);
             
-            setNewsData(response.data.item)
-            
-                // setNewsImg(response.data.news.map(a=>a.thumbnail?.resolutions[0]?.url))
+            setNewsData(response.data.articles)
+            console.log(newsData);
+                // setNewsImg(response.data.articles.urlToImage)
+                // console.log(newsImg,777);
                 setLoading(false); // change TO FALSE
             
             

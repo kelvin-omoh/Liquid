@@ -58,11 +58,10 @@ export default function News() {
         { newsData.map((news,id)=>(
          
 
-            <Link to={`/news/${news.guid}`}>
+            <Link to={`/news/${news.title}`}>
                 <div key={id} className='news-item my-4'>
                     <div className=' relative  '>
-                    <img src={`https://source.unsplash.com/1600x900/?$${news.title}  -technology `}/>                  
-                        {/* <img src={`https://pixabay.com/api/?key=33987218-71374b5bf9d4f9b8fee9caa6f&q={${news.title}}&image_type=photo&per_page=1&min_width=1600&min_height=900`}/> */}
+                    <img src={news.urlToImage } />                        {/* <img src={`https://pixabay.com/api/?key=33987218-71374b5bf9d4f9b8fee9caa6f&q={${news.title}}&image_type=photo&per_page=1&min_width=1600&min_height=900`}/> */}
                         <button className='news-btn'>NEWS</button>
                         <span className='news-L absolute  m-3'>G.F</span>
                     </div>
@@ -72,7 +71,7 @@ export default function News() {
                         <hr/>
                         <div className='flex flex-col gap-1 md:flex-row justify-between items-center'>
                              <p>GLOBAL FINANCE  </p>
-                        <p>{news.pubDate}</p>
+                        <p>{news.publishedAt}</p>
                         </div>
                        
                     </div>

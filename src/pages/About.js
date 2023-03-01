@@ -30,7 +30,7 @@ export default function About() {
                     <div className=' flex flex-col gap-4 my-4'>
                          <h1 className=' font-bold'>MANAGEMENT</h1>
 
-                    <h1 className=' font-bold'>TIM H.</h1>
+                    <h1 className=' font-bold'>PAUL WELTON.</h1>
 
                     <h1 className='about-blue-txt'>FINANCE</h1>
                     </div>
@@ -44,7 +44,7 @@ export default function About() {
 
                 <div className='management-container'>
                 <div className=' flex flex-col gap-4 my-4'>
-                    <h1 className=' font-bold'>DAVID C.</h1>
+                    <h1 className=' font-bold'>WILLIAMS FULLER</h1>
 
                     <h1 className='about-blue-txt'>CONSTRUCTION</h1>
                     </div>
@@ -64,7 +64,7 @@ export default function About() {
 
                 <div className='management-container'>
                 <div className=' flex flex-col gap-4 my-4'>
-                    <h1 className=' font-bold'>BRANDON L.</h1>
+                    <h1 className=' font-bold'>JAMES WEBBER</h1>
                      <h1 className='about-blue-txt' >MARKETING</h1>
                     </div>
                     
@@ -74,7 +74,7 @@ export default function About() {
 
                 <div className='management-container'>
                    <div className=' flex flex-col gap-4 my-4'>
-                        <h1 className=' font-bold'>NICOLE L.</h1>
+                        <h1 className=' font-bold'>WILSON ALFRED</h1>
                           <h1 className='about-blue-txt' >DESIGN</h1>
                     </div>
                    
