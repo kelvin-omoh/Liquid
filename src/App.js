@@ -9,7 +9,7 @@ import Tracts from './pages/Tracts';
 import Footer from './components/footer';
 import Navbar from './components/navbar';
 import FundsDynamic from './pages/dynamic-page/fundsDynamic';
-import White from './pages/White';
+import Admin from './pages/Admin';
 import SingleNews from './pages/dynamic-page/singleNews';
 import PrivacyPolicy from './pages/Privacy-policy';
 import TermsOfService from './pages/Terms-of-service';
@@ -25,7 +25,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />}></Route>
           <Route path='/about' element={<About />}></Route>
-          <Route path='/white' element={<White/>}></Route>
+          <Route path='/admin' element={<Admin/>}></Route>
           <Route path='/funds' element={<Funds />}></Route>
           <Route path='/funds/:data' element={<FundsDynamic />}> </Route> {/* Uses Dynamic Routing */}
           <Route path='/investors' element={<Investors />}></Route>

@@ -51,13 +51,12 @@ export default function Home() {
                              
 
 
-
-                                <Link to={`/news/${news.guid}`}>
+                                <Link to={`/news/${news.title}`}>
 
 
                                     <div key={id} className='news-item my-4'>
                                         <div className=' relative  '>
-                                        <img src={`https://source.unsplash.com/1600x900/?$${news.title}  -technology `}/>
+                                        <img src={news.urlToImage}/>
                                            <button className='news-btn'>NEWS</button>
                                             <span className='news-L absolute  m-3'>G.F</span>
                                         </div>

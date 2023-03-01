@@ -50,41 +50,42 @@ export default function News() {
             <h1 className='news-head'>NEWS</h1>
               
             <div className='news-container my-3'>
-        {loading ?
-            <div className='text-center'>
-                <LoadingSpinner errorOccured={error}/>
-            </div>:  <>
+                {loading ?
+                    <div className='text-center'>
+                        <LoadingSpinner errorOccured={error}/>
+                    </div> 
+                : 
+                <>
         
-        { newsData.map((news,id)=>(
-         
-
-            <Link to={`/news/${news.title}`}>
-                <div key={id} className='news-item my-4'>
-                    <div className=' relative  '>
-                    <img src={news.urlToImage } />                        {/* <img src={`https://pixabay.com/api/?key=33987218-71374b5bf9d4f9b8fee9caa6f&q={${news.title}}&image_type=photo&per_page=1&min_width=1600&min_height=900`}/> */}
-                        <button className='news-btn'>NEWS</button>
-                        <span className='news-L absolute  m-3'>G.F</span>
-                    </div>
-                    <div className='news-text'>
-                        <h3>{news.title}</h3>
-                        
-                        <hr/>
-                        <div className='flex flex-col gap-1 md:flex-row justify-between items-center'>
-                             <p>GLOBAL FINANCE  </p>
-                        <p>{news.publishedAt}</p>
-                        </div>
-                       
-                    </div>
-                </div>
-            </Link>
-                
-                   ))
+                    { newsData.map((news,id)=>( 
+                                       
+                        <Link to={`/news/${news.title}`}>
+                            <div key={id} className='news-item my-4'>
+                                <div className=' relative  '>
+                                <img src={news.urlToImage } />                        {/* <img src={`https://pixabay.com/api/?key=33987218-71374b5bf9d4f9b8fee9caa6f&q={${news.title}}&image_type=photo&per_page=1&min_width=1600&min_height=900`}/> */}
+                                    <button className='news-btn'>NEWS</button>
+                                    <span className='news-L absolute  m-3'>G.F</span>
+                                </div>
+                                <div className='news-text'>
+                                    <h3>{news.title}</h3>
+                                    
+                                    <hr/>
+                                    <div className='flex flex-col gap-1 md:flex-row justify-between items-center'>
+                                        <p>GLOBAL FINANCE  </p>
+                                    <p>{news.publishedAt}</p>
+                                    </div>
+                                
+                                </div>
+                            </div>
+                        </Link>
+                            
+                            ))
+                                
+                            }
+                    </>
                     
-                   }
-        </>
-                   
-              
-            }
+                
+                }
 
             </div>
             <InvestorProspectus />

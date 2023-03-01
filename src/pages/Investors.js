@@ -8,17 +8,23 @@ import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { AppContext } from '../components/AppContext';
+import { useContext } from 'react';
 
 export default function Investors() {
-const navigate=useNavigate() 
-const form = useRef();
-const [email,setEmail]=useState("")
-const[firstName,setFirstName]=useState("")
-const[secondName,setSecondName]=useState("")
-const [amount, setAmount] = useState("")
-const[phoneNumber,setPhoneNumber]=useState("")
-const [password,setPassword]=useState("")
-const [errrors,seterrors]=useState("")
+
+    const {loggedIn, setLoggedIn} = useContext(AppContext)
+
+    const navigate=useNavigate() 
+
+    const form = useRef();
+    const [email,setEmail]=useState("")
+    const[firstName,setFirstName]=useState("")
+    const[secondName,setSecondName]=useState("")
+    const [amount, setAmount] = useState("")
+    const[phoneNumber,setPhoneNumber]=useState("")
+    const [password,setPassword]=useState("")
+    const [errrors,seterrors]=useState("")
 
     const handleSubmit= (e)=>{
         e.preventDefault()
@@ -92,9 +98,10 @@ const [errrors,seterrors]=useState("")
        progress: undefined,
        theme: "dark",
        });
+       setLoggedIn(true)
      const user = userCredential.user;
      console.log(user);
-     navigate("/white")
+     navigate("/admin")
      setEmail("")
      setPassword("")
     //  setislogged(true)
