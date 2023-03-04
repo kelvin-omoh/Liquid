@@ -65,7 +65,7 @@
     .investor-prospectus-text > div {
         display: flex;
         flex-direction: column;
-        padding-left: 2em;
+        padding-left: 0em;
         padding-right: 2em;
     }
 
@@ -75,6 +75,7 @@
 
     .investor-prospectus-text > div input {
         font-size: 1em;
+        margin-left: 1em;
     }
 
     .investor-prospectus-text {
@@ -83,8 +84,8 @@
 
     .investor-prospectus-text > div button {
         width: 100%;
-        padding: 1.2em 6em 1.2em 6em;
-        margin-left: 0em;
+        padding: 1.2em 4em 1.2em 4em;
+        margin-left: 1em;
         margin-top: 1em;
     }
     

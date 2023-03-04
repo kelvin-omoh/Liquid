@@ -22,7 +22,7 @@
 .hero-texts > h1 {
     font-weight: 1;
     /* padding-bottom: 10px; */
-    font-size: clamp(3.3em, 3.7vw, 3.8em);
+    font-size: clamp(3em, 3.7vw, 3.8em);
 }
 
 .hero-btn button {
@@ -239,4 +239,12 @@
         width: 100%;
     }
     
+}
+
+@media screen and (max-width: 330px) {
+    .hero-texts > h1 {
+        font-weight: 1;
+        /* padding-bottom: 10px; */
+        font-size: 2.7em;
+    }
 }

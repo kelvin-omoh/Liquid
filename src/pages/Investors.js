@@ -28,8 +28,10 @@ export default function Investors() {
     const [amount, setAmount] = useState("")
     const[phoneNumber,setPhoneNumber]=useState("")
     const [password,setPassword]=useState("")
-    const [errrors,seterrors]=useState("")
+    // const [errrors,seterrors]=useState("")
     const dispatch=useDispatch()
+    const [displayError, setDisplayError] = useState(false)
+    const [logInLoading, setLogInLoading] = useState(false)
     const userState=useSelector(state=>state.user.state)
             // console.log(userState);
     const handleSubmit= (e)=>{
@@ -116,44 +118,43 @@ export default function Investors() {
 
 
   const handleLogin= (e)=>{
-   
     e.preventDefault()
-   //  alert()
-  
+   setLogInLoading(true)
      
    e.preventDefault()
    signInWithEmailAndPassword(auth, email, password)
    .then((userCredential) => {
-     // Signed in 
-     toast.success('login succesful', {
-       position: "top-right",
-       autoClose: 5000,
-       hideProgressBar: false,
-       closeOnClick: true,
-       pauseOnHover: true,
-       draggable: true,
-       progress: undefined,
-       theme: "dark",
-       });
-       setLoggedIn(true)
-     const user = userCredential.user;
-    //  console.log(user);
-     if(user){
         setLoggedIn(true)
-     }
-     navigate("/admin")
-     setEmail("")
-     setPassword("")
+        setLogInLoading(false)
+        // Signed in 
+        toast.success('login succesful', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+        });
+        const user = userCredential.user;
+        //  console.log(user);
+    if(user){
+        setLoggedIn(true)
+    }
+    navigate("/admin")
+    setEmail("")
+    setPassword("")
     //  setislogged(true)
 
     
      // ...
    })
    .catch((error) => {
-     const errorCode = error.code;
-    //  const errorMessage = error.message;
-     seterrors(errorCode)
-     console.log(errorCode);
+        const errorCode = error.code;
+        setLogInLoading(false)
+        setDisplayError(true)
+        console.log(errorCode);
 
    });
 }
@@ -163,19 +164,19 @@ export default function Investors() {
             <h1 className='investor-head'>INVESTORS</h1>
             <div className='w-fit h-fit'>
             <ToastContainer
-position="top-right"
-autoClose={5000}
-hideProgressBar={false}
-newestOnTop={false}
-closeOnClick
-rtl={false}
-pauseOnFocusLoss
-draggable
-pauseOnHover
-theme="light"
-/>
-{/* Same as */}
-<ToastContainer />
+                position="top-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
+            />
+                {/* Same as */}
+            <ToastContainer />
             </div>
 
             <div className='investor-request'>
@@ -223,20 +224,21 @@ theme="light"
             <div className='investor-login'>
 
                 <h3>Current Investors</h3>
+
                 <form onSubmit={handleLogin}>
                     <div className='loginItem'>
-                    <label>Email-Address</label>
-                    <input required onChange={(e)=>setEmail(e.target.value)} value={email}  type={'text'} />
-                </div>
-                <div className='loginItem'>
-                    <label>Password</label>
-                    <input required onChange={(e)=>setPassword(e.target.value)} value={password} className='' type={'password'} />
-                </div> 
-                <p>Remember Me</p>
-                <button >Log In</button>
-                <p>Lost your password? </p>
+                        <label>Email-Address</label>
+                        <input required onChange={(e)=> ( setEmail(e.target.value), displayError && setDisplayError(false) )} value={email}  type={'text'} />
+                    </div>
+                    <div className='loginItem'>
+                        <label>Password</label>
+                        <input required onChange={(e)=>( setPassword(e.target.value), displayError && setDisplayError(false) )} value={password} className='' type={'password'} />
+                    </div> 
+                        <p>Remember Me</p>
+                        <button style={ logInLoading ? {opacity: '0.5'} : {opacity: '1'}}>Log In</button>
+                    <p>Lost your password? </p>
                </form>
-               
+                {displayError && <p style={{color: 'red'}}>Incorrect email or Password...</p>}
             </div>
            
                 

@@ -11,7 +11,6 @@ export default function Navbar() {
     const {loggedIn} = useContext(AppContext)
     const {pathname} = useLocation()
     const[hambugger,setHambugger]=useState(false)
-    console.log(pathname)
 
     const toggle=()=>{
       setHambugger(!hambugger)
@@ -20,31 +19,31 @@ export default function Navbar() {
 
     const logout=()=>{
         const auth = getAuth();
-signOut(auth).then(() => {
-  // Sign-out successful.
-  toast.success(`Logged-out successful.`, {
-    position: "top-right",
-    autoClose: 5000,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
-    progress: undefined,
-    theme: "dark",
+        signOut(auth).then(() => {
+        // Sign-out successful.
+        toast.success(`Logged-out successful.`, {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+        });
+        }).catch((error) => {
+            // An error happened.
+            toast.error(`Logged-out failed.`, {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+        });
     });
-}).catch((error) => {
-  // An error happened.
-  toast.error(`Logged-out failed.`, {
-    position: "top-right",
-    autoClose: 5000,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
-    progress: undefined,
-    theme: "dark",
-    });
-});
     }
 
 
@@ -66,17 +65,17 @@ signOut(auth).then(() => {
                 
             </div>
             <ToastContainer
-position="top-right"
-autoClose={5000}
-hideProgressBar={false}
-newestOnTop={false}
-closeOnClick
-rtl={false}
-pauseOnFocusLoss
-draggable
-pauseOnHover
-theme="light"
-/>
+                position="top-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
+            />
             
             <ul className=" hidden md:flex   " >
                 <Link to='/about' ><li  id={pathname === '/about' && 'active'}>ABOUT</li></Link>
@@ -85,14 +84,14 @@ theme="light"
                 <Link to='/news'><li id={pathname === '/news' && 'active'} >NEWS</li></Link>
                 <Link to='/investors'><li id={pathname === '/investors' && 'active' } >INVESTORS</li></Link>
                 {
-                    loggedIn ?   <Link to='/admin'><li id={pathname === '/admin' && 'active'} >Dashbooard</li></Link>
+                    loggedIn ?   <Link to='/admin'><li onClick={toggle} id={pathname === '/admin' && 'active'} >DASHBOARD</li></Link>
                     :
                     null
 
                 }
                 {
-                    loggedIn ? <button onClick={logout} className="bg-red-700 left-[90%] p-3 absolute text-yellow-50">Logout</button>
-                    :
+                    loggedIn ? <button onClick={logout} className="logout-btn">Logout</button>
+                    :           /* <button onClick={logout} className="bg-red-700 left-[90%] p-3 absolute text-yellow-50">Logout</button> */
                     null
 
                 }
@@ -112,7 +111,7 @@ theme="light"
                 <Link to='/news'><li id={pathname === '/news' && 'active'} >NEWS</li></Link>
                 <Link to='/investors'><li id={pathname === '/investors' && 'active' } >INVESTORS</li></Link>
                 {
-                    loggedIn ?   <Link to='/admin'><li id={pathname === '/admin' && 'active'} >Dashbooard</li></Link>
+                    loggedIn ?   <Link to='/admin'><li onClick={toggle} id={pathname === '/admin' && 'active'} >DASHBOARD</li></Link>
                     :
                     null
 
@@ -132,7 +131,7 @@ theme="light"
                 <Link to='/news'><li onClick={toggle} id={pathname === '/news' && 'active'} >NEWS</li></Link>
                 <Link to='/investors'><li onClick={toggle} id={pathname === '/investors' ? 'investor-active' : 'investor'} >INVESTORS</li></Link>
                 {
-                    loggedIn ?   <Link to='/admin'><li id={pathname === '/admin' && 'active'} >Dashbooard</li></Link>
+                    loggedIn ?   <Link to='/admin'><li onClick={toggle} id={pathname === '/admin' && 'active'} >DASHBOARD</li></Link>
                     :
                     null
 

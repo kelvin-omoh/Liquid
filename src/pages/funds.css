@@ -122,7 +122,13 @@
     * {
         /* background-color: red; */
     }
+    .funds-plans-container {
+        gap: 4%;
+        margin: 0 5em 2em 5em;
+        /* margin-top: 10% */
+    }
 
+    
     .one {
         grid-template-columns: 30% 70%;
     }
