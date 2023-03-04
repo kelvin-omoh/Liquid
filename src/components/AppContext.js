@@ -1,6 +1,7 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import axios from "axios";
-
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "../Firebase";
 const AppContext = createContext()
 
 function ContextProvider(props) {
@@ -11,10 +12,12 @@ function ContextProvider(props) {
     const [error, setError] = useState(false)
     const [loggedIn, setLoggedIn] = useState(false)
     // const[eachNews,setEachNews]=useState("")
-   
-    
-      const url =`https://newsapi.org/v2/everything?q=finance+technology+money&apiKey=1f7e0a872316481f9dbe8cd016a43eb9`;
 
+    const url =`https://newsapi.org/v2/everything?q=finance+technology+money&apiKey=1f7e0a872316481f9dbe8cd016a43eb9`;
+
+    
+
+ useEffect(() => {
     function fetchNews() {
         console.log('fetch data')
         axios.get(url).then(function (response) {
@@ -22,7 +25,7 @@ function ContextProvider(props) {
             
             let truncatedData = []
 
-            for (let i = 0; i <= 15; i++) {
+            for (let i = 0; i <= 19; i++) {
                 truncatedData.push(response.data.articles[i])
             }
 
@@ -40,9 +43,18 @@ function ContextProvider(props) {
             console.error(error);
         });
     }
-
     console.log('context')
     newsData.length <= 1 && fetchNews()
+    fetchNews()
+    
+
+    //to prevent it from reloading
+    onAuthStateChanged(auth, (r) => {
+        setLoggedIn(r)
+    })
+
+ },[]);
+   
 
     return (
         <AppContext.Provider value={{newsData, newsImg, loading, error, loggedIn, setLoggedIn}}>

@@ -9,19 +9,21 @@ export default function SingleNews () {
     const {newsId} = useParams()
     const {newsData, newsImg, loading} = useContext(AppContext)
 
-    console.log(newsId)
+    // console.log(newsId)
     // newsId.replace("/%20/", ' ')
-    console.log(newsId)
+    // console.log(newsId)
     // check if the data has loaded from API
 
     if (!loading) {
         // console.log(newsId.replace("/%20/", ' '))
         // newsId=newsId.replace("/%20/", ' ')
-        console.log(newsId)
+        // console.log(newsId)
         // To get current single News Item data form context using the news ID gotten from url parameter
-        console.log(newsData);
+        // console.log(newsData);
 
-        const currentNews = newsData.filter((data) => data.title.replace('?', '') === newsId)
+        const currentNews = newsData.filter((data) =>  data.title.replace('?', '') === newsId)
+
+        // const content=currentNews[0].filter(data=> data.content.slice(0,data.content.indexOf("[")))
         // console.log(currentNews[0].urlToImage)
 
         // To check if the news Exist
@@ -49,6 +51,8 @@ export default function SingleNews () {
                         </div>
                     </div>
 
+                  
+                    {/* <p>{content}</p>  */}
                     <p>{currentNews[0].description}</p>
                 </div>
             )

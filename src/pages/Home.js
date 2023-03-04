@@ -28,7 +28,7 @@ export default function Home() {
             <div className='hero-container'>
                 <img src={heroImg}></img>
                 <div className='hero-texts flex flex-col gap-3 md:gap-6 '>
-                    <h1 className=''>GLOBAL FINANCE Investments</h1>
+                    <h1 className=''>GLOBAL FINANCE INVESTMENT</h1>
                     <p>Diversified Opportunity Zone And Blockchain Funds</p>
                     <div className='hero-btn'>
                         <Link to='/funds'><button>Learn More</button></Link>

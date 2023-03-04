@@ -14,12 +14,17 @@ import SingleNews from './pages/dynamic-page/singleNews';
 import PrivacyPolicy from './pages/Privacy-policy';
 import TermsOfService from './pages/Terms-of-service';
 import { Link } from 'react-router-dom';
-
 import FAQ from './pages/FAQ';
 
+import {Provider} from 'react-redux'
+import store from './Store/Store';
 function App() {
+ 
   return (
-    <div className="App">
+    <div className="App"  >
+      <Provider store={store} >
+
+      
       <Navbar />
       <div className='other-pages'>
         <Routes>
@@ -42,6 +47,7 @@ function App() {
         </Routes>
       </div>
       <Footer />
+      </Provider>
     </div>
   );
 }

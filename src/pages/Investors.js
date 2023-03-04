@@ -1,8 +1,7 @@
 import './investor.css'
-import React, { useEffect, useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
-import {  createUserWithEmailAndPassword } from "firebase/auth";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import {  signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../Firebase';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
@@ -10,10 +9,15 @@ import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { AppContext } from '../components/AppContext';
 import { useContext } from 'react';
+import { userSliceAction } from '../Store/UserSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import {db} from "../Firebase" 
+import { collection, addDoc } from "firebase/firestore"; 
+
 
 export default function Investors() {
 
-    const {loggedIn, setLoggedIn} = useContext(AppContext)
+    const { setLoggedIn} = useContext(AppContext)
 
     const navigate=useNavigate() 
 
@@ -25,21 +29,41 @@ export default function Investors() {
     const[phoneNumber,setPhoneNumber]=useState("")
     const [password,setPassword]=useState("")
     const [errrors,seterrors]=useState("")
-
+    const dispatch=useDispatch()
+    const userState=useSelector(state=>state.user.state)
+            // console.log(userState);
     const handleSubmit= (e)=>{
-        e.preventDefault()
-       //  alert()
-        
-        //  navigate("/white")
-        
-         // ...
-     
 
+        e.preventDefault()
+
+       //email
+           emailjs.sendForm('service_gnudc5o', 'template_4ynk22d', form.current, '8QMByjHKBkunDfDEh')
+             .then(() => {
+                //  console.log(result.text);
+                 //object of every new user
+                const newUser = {
+
+                    name: firstName + ' ' + secondName,
+                    email: email,
+                    phone: phoneNumber,
+                    Amount: amount,
+                    status:false,
+                  }
+
+                  //fuction to add every user to the database
+                
+              const addtoDb=async()=>{
+                  try {
+                    const docRef = await addDoc(collection(db, "users"), newUser);
+                    
+                    // console.log("Document written with ID: ", docRef.id);
+                  } catch (e) {
+                    console.error("Error adding document: ", e);
+                  }
+                  }
+                 addtoDb()
          
-       
-           emailjs.sendForm('service_1nzqupt', 'template_1gilt7h', form.current, 'CMSQKiws59IN5Dh76')
-             .then((result) => {
-                 console.log(result.text);
+                //  console.log(user);
                  toast.success('Your prospectus request has been sent !', {
                     position: "top-right",
                     autoClose: 5000,
@@ -50,7 +74,18 @@ export default function Investors() {
                     progress: undefined,
                     theme: "dark",
                     });
+                    
+                 //from redux to handle the state
+                  dispatch(userSliceAction.addUser([{
+                        name: firstName + ' ' + secondName,
+                        email: email,
+                        phone: phoneNumber,
+                        Amount: amount
+                  }]))
+                  
                  console.log("sent");
+                //  console.log(userState);
+                 
              }, (error) => {
                 toast.error(`Request Prospectus FAILED!!!!`, {
                     position: "top-right",
@@ -65,6 +100,7 @@ export default function Investors() {
                  console.log(error.text);
                  console.log("Failed");
              });
+             //reset the data back to empty
        setFirstName("")
        setSecondName("")
        setEmail("")
@@ -73,6 +109,7 @@ export default function Investors() {
        
        
      }
+    
      
 
 
@@ -100,7 +137,10 @@ export default function Investors() {
        });
        setLoggedIn(true)
      const user = userCredential.user;
-     console.log(user);
+    //  console.log(user);
+     if(user){
+        setLoggedIn(true)
+     }
      navigate("/admin")
      setEmail("")
      setPassword("")
@@ -111,8 +151,9 @@ export default function Investors() {
    })
    .catch((error) => {
      const errorCode = error.code;
-     const errorMessage = error.message;
+    //  const errorMessage = error.message;
      seterrors(errorCode)
+     console.log(errorCode);
 
    });
 }
@@ -165,8 +206,7 @@ theme="light"
                     <label>Phone Number</label>
                     <input value={phoneNumber} name="phone_number" required onChange={(e)=>setPhoneNumber(e.target.value)} type={'number'} placeholder='(xxx) xxx-xxx '/>
                     <label>Expected Investment Amount</label>
-                    <input value={amount} name="amount" required onChange={(e)=>setAmount(e.target.value)} type={'number'} placeholder='$'/>
-                    <label>Are You An Accredited Investor</label>
+                    <input value={amount} name="amount" required onChange={(e)=>setAmount(e.target.value)} type={'number'} placeholder='Enter Amount'/>                    <label>Are You An Accredited Investor</label>
                     <select className=' border-3px border-red-900'>
                         <option>Yes</option>
                         <option>No</option>
@@ -175,8 +215,10 @@ theme="light"
                 </div> 
                 </form>
             </div>
-
-            <hr/>
+         <div className=' w-full flex justify-center'>
+            <hr className=''/>
+         </div>
+            
             
             <div className='investor-login'>
 
