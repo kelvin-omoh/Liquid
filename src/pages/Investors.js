@@ -23,6 +23,7 @@ export default function Investors() {
 
     const form = useRef();
     const [email,setEmail]=useState("")
+    const [email2,setEmail2]=useState("")
     const[firstName,setFirstName]=useState("")
     const[secondName,setSecondName]=useState("")
     const [amount, setAmount] = useState("")
@@ -119,10 +120,14 @@ export default function Investors() {
    
     e.preventDefault()
    //  alert()
+
+   //reset
+   setEmail2("")
+   setPassword("")
   
-     
+      console.log(email2);
    e.preventDefault()
-   signInWithEmailAndPassword(auth, email, password)
+   signInWithEmailAndPassword(auth, email2, password)
    .then((userCredential) => {
      // Signed in 
      toast.success('login succesful', {
@@ -135,14 +140,17 @@ export default function Investors() {
        progress: undefined,
        theme: "dark",
        });
-       setLoggedIn(true)
+       setLoggedIn(true)  
+    
      const user = userCredential.user;
     //  console.log(user);
      if(user){
         setLoggedIn(true)
      }
+     console.log(email2);
+    console.log(password);
      navigate("/admin")
-     setEmail("")
+     setEmail2("")
      setPassword("")
     //  setislogged(true)
 
@@ -152,6 +160,8 @@ export default function Investors() {
    .catch((error) => {
      const errorCode = error.code;
     //  const errorMessage = error.message;
+    console.log(email2);
+    console.log(password);
      seterrors(errorCode)
      console.log(errorCode);
 
@@ -226,7 +236,7 @@ theme="light"
                 <form onSubmit={handleLogin}>
                     <div className='loginItem'>
                     <label>Email-Address</label>
-                    <input required onChange={(e)=>setEmail(e.target.value)} value={email}  type={'text'} />
+                    <input required onChange={(e)=>setEmail2(e.target.value)} value={email2}  type={'text'} />
                 </div>
                 <div className='loginItem'>
                     <label>Password</label>
