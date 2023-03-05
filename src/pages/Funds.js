@@ -52,7 +52,7 @@ export default function Funds() {
                     <h1 className="my-14">Lunar</h1>
                     <h2 className='text-[1.9em] my-4'>Blockchain FUND</h2>
 
-                    <p>Lunar Fund is a high-growth cryptocurrency investment vehicle available for both new and existing Liquid investors. Deposits accepted through 2023. Dividends are batched and sent quarterly with Liquid QOF II payments.  
+                    <p>Lunar Fund is a high-growth cryptocurrency investment vehicle available for both new and existing Global Finance investors. Deposits accepted through 2023. Dividends are batched and sent quarterly with Global Finance QOF II payments.  
                     </p>
 
                     <ul className='flex justify-center flex-col gap-7 my-9'>
@@ -73,7 +73,7 @@ export default function Funds() {
                     <h1 className="my-14 text-gray-400">QOF I</h1>
                     <h2 className='text-[1.9em] my-4'>Opportunity Zone Fund</h2>
 
-                    <p>The first opportunity zone fund offered by Liquid. QOF I is designed for income-focused investors with significant capital gains events in 2021. Capital deployed into our oz business campus and startup portfolio with dividends paid quarterly. 
+                    <p>The first opportunity zone fund offered by GLobal Finance. QOF I is designed for income-focused investors with significant capital gains events in 2021. Capital deployed into our oz business campus and startup portfolio with dividends paid quarterly. 
                     </p>
 
                     <ul className='flex justify-center flex-col gap-7 my-9'>
@@ -102,10 +102,10 @@ export default function Funds() {
                     <div className='funds-opportunity-text'>
                         <h1>OZ Fund</h1>
                         <p>
-                            Liquid QOF II is our primary opportunity zone investment fund
+                            Global Finance QOF II is our primary opportunity zone investment fund
                             structured to provide income investors with tax-free capital gains on the growth of our Austin-based startup business portfolio.
                         </p>
-                        <button onClick={() => navigateTo(`/funds/qof-II`)} >More On Liquid QOF II </button>
+                        <button onClick={() => navigateTo(`/funds/qof-II`)} >More On Global Finance QOF II </button>
                     </div>
                 </div>
 
@@ -140,7 +140,7 @@ export default function Funds() {
                     <div className='funds-opportunity-text'>
                         <h1>Identified Tracts</h1>
                         <p>
-                            The Liquid Fund is ready to deploy capital into carefully chosen opportunity zone tracts in Austin, TX. These tracts include East St Elmo, Montopolis, East Oltorf and Parker Lane.
+                            The Global Finance Fund is ready to deploy capital into carefully chosen opportunity zone tracts in Austin, TX. These tracts include East St Elmo, Montopolis, East Oltorf and Parker Lane.
                         </p>
                         <button onClick={() => navigateTo(`/tracts`)} >More About Tracts</button>
                     </div>

@@ -25,7 +25,8 @@
 }
 .investor-prospectus-text  div input {
     /* width: auto; */
-    padding: 0.7em 3em 0.7em 0.5em;
+    /* padding: 0.7em 4em 0.7em 0.5em; */
+    padding: 1.4em;
     font-size: 2em;
     background-color: transparent;
     border: 1px solid black;

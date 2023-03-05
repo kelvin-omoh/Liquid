@@ -15,7 +15,7 @@ export default function About() {
                 </p>
                 <br />
                 <p>
-                    With LGLOBAL FINANCE, investors can support the growth and revitalization of underserved communities while also growing their wealth. Our team of experienced professionals
+                    With GLOBAL FINANCE, investors can support the growth and revitalization of underserved communities while also growing their wealth. Our team of experienced professionals
                     carefully selects and monitors investments, ensuring that our fund is well-diversified and has the potential for strong returns.
                 </p>
             </div>

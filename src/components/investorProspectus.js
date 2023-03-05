@@ -13,12 +13,12 @@ export default function InvestorProspectus() {
         <div className='investor-prospectus'>
             <img className=' object-cover' src={investorIMG}></img>
             {/* <div className='investor-txt'> */}
-            <div className='investor-prospectus-text'>
+            <div className='investor-prospectus-text '>
                 <div>
                     <h1 className='text-center md:text-left'>INVESTOR PROSPECTUS</h1>
-                    <form action="" onSubmit={download}>
-                        <input className=' text-[1em]' required placeholder='your@email.com'></input>
-                    <button className=''>Download</button>
+                    <form action="" className='flex w-full flex-col md:flex-row  ' onSubmit={download}>
+                        <input className=' text-[1em]  ' required placeholder='your@email.com'></input>
+                    <button className=' '>Download</button>
                     </form>
                     
                 </div>
