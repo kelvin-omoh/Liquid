@@ -29,13 +29,17 @@ export default function Investors() {
     const [amount, setAmount] = useState("")
     const[phoneNumber,setPhoneNumber]=useState("")
     const [password,setPassword]=useState("")
-    const [errrors,seterrors]=useState("")
     const dispatch=useDispatch()
-    const userState=useSelector(state=>state.user.state)
+    const [displayError, setDisplayError] = useState(false)
+    const [logInLoading, setLogInLoading] = useState(false)
+    const [prospectusLoading, setProspectusLoading] = useState(false)
+ 
+    const userState = useSelector(state=>state.user.state)
             // console.log(userState);
     const handleSubmit= (e)=>{
-
+    
         e.preventDefault()
+        setProspectusLoading(true)
 
        //email
            emailjs.sendForm('service_gnudc5o', 'template_4ynk22d', form.current, '8QMByjHKBkunDfDEh')
@@ -63,7 +67,7 @@ export default function Investors() {
                   }
                   }
                  addtoDb()
-         
+                  
                 //  console.log(user);
                  toast.success('Your prospectus request has been sent !', {
                     position: "top-right",
@@ -75,7 +79,16 @@ export default function Investors() {
                     progress: undefined,
                     theme: "dark",
                     });
-                    
+
+                    //reset the data back to empty
+                    setFirstName("")
+                    setSecondName("")
+                    setEmail("")
+                    setPhoneNumber("")
+                    setAmount("")
+                  
+                    setProspectusLoading(false)
+
                  //from redux to handle the state
                   dispatch(userSliceAction.addUser([{
                         name: firstName + ' ' + secondName,
@@ -98,18 +111,13 @@ export default function Investors() {
                     progress: undefined,
                     theme: "dark",
                     });
+                    setProspectusLoading(false)
                  console.log(error.text);
                  console.log("Failed");
              });
-             //reset the data back to empty
-       setFirstName("")
-       setSecondName("")
-       setEmail("")
-       setPhoneNumber("")
-       setAmount("")
+             
        
-       
-     }
+    }
     
      
 
@@ -117,53 +125,55 @@ export default function Investors() {
 
 
   const handleLogin= (e)=>{
-   
     e.preventDefault()
+   setLogInLoading(true)
+     
    //  alert()
 
-   //reset
-   setEmail2("")
-   setPassword("")
+//    //reset
+//    setEmail2("")
+//    setPassword("")
   
-      console.log(email2);
-   e.preventDefault()
-   signInWithEmailAndPassword(auth, email2, password)
-   .then((userCredential) => {
-     // Signed in 
-     toast.success('login succesful', {
-       position: "top-right",
-       autoClose: 5000,
-       hideProgressBar: false,
-       closeOnClick: true,
-       pauseOnHover: true,
-       draggable: true,
-       progress: undefined,
-       theme: "dark",
-       });
-       setLoggedIn(true)  
-    
-     const user = userCredential.user;
-    //  console.log(user);
-     if(user){
+        console.log(email2);
+        e.preventDefault()
+        signInWithEmailAndPassword(auth, email2, password)
+            .then((userCredential) => {
+                setLoggedIn(true)
+                setLogInLoading(false)
+            // Signed in 
+            toast.success('login succesful', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+            });
+        const user = userCredential.user;
+        //  console.log(user);
+    if(user){
         setLoggedIn(true)
-     }
-     console.log(email2);
-    console.log(password);
-     navigate("/admin")
-     setEmail2("")
-     setPassword("")
-    //  setislogged(true)
-
-    
-     // ...
-   })
-   .catch((error) => {
-     const errorCode = error.code;
-    //  const errorMessage = error.message;
+    }
     console.log(email2);
     console.log(password);
-     seterrors(errorCode)
-     console.log(errorCode);
+
+    navigate("/admin")
+    setEmail("")
+    setPassword("")
+
+     
+   })
+   .catch((error) => {
+        const errorCode = error.code;
+        setLogInLoading(false)
+        setDisplayError(true)
+        console.log(errorCode);
+
+    // console.log(email2);
+    // console.log(password);
+    //  console.log(errorCode);
 
    });
 }
@@ -173,19 +183,19 @@ export default function Investors() {
             <h1 className='investor-head'>INVESTORS</h1>
             <div className='w-fit h-fit'>
             <ToastContainer
-position="top-right"
-autoClose={5000}
-hideProgressBar={false}
-newestOnTop={false}
-closeOnClick
-rtl={false}
-pauseOnFocusLoss
-draggable
-pauseOnHover
-theme="light"
-/>
-{/* Same as */}
-<ToastContainer />
+                position="top-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
+            />
+                {/* Same as */}
+            <ToastContainer />
             </div>
 
             <div className='investor-request'>
@@ -221,7 +231,7 @@ theme="light"
                         <option>Yes</option>
                         <option>No</option>
                     </select>
-                    <button  type='submit'>Request Prospectus</button>
+                    <button  type='submit' style={prospectusLoading ? {opacity: '0.5'} : {opacity: '1'}}>Request Prospectus</button>
                 </div> 
                 </form>
             </div>
@@ -233,20 +243,22 @@ theme="light"
             <div className='investor-login'>
 
                 <h3>Current Investors</h3>
+
                 <form onSubmit={handleLogin}>
                     <div className='loginItem'>
-                    <label>Email-Address</label>
-                    <input required onChange={(e)=>setEmail2(e.target.value)} value={email2}  type={'text'} />
-                </div>
-                <div className='loginItem'>
-                    <label>Password</label>
-                    <input required onChange={(e)=>setPassword(e.target.value)} value={password} className='' type={'password'} />
-                </div> 
-                <p>Remember Me</p>
-                <button >Log In</button>
-                <p>Lost your password? </p>
+                        <label>Email-Address</label>
+                        <input required onChange={(e)=> ( setEmail2(e.target.value), displayError && setDisplayError(false) )} value={email2}  type={'text'} />
+                    </div>
+                    <div className='loginItem'>
+                        <label>Password</label>
+                        <input required onChange={(e)=>( setPassword(e.target.value), displayError && setDisplayError(false) )} value={password} className='' type={'password'} />
+                    </div> 
+                        <p>Remember Me</p>
+                        <button style={ logInLoading ? {opacity: '0.5'} : {opacity: '1'}}>Log In</button>
+                        <p>Lost your password? </p>
+
                </form>
-               
+                {displayError && <p style={{color: 'red'}}>Incorrect email or Password...</p>}
             </div>
            
                 

@@ -51,7 +51,7 @@ export default function Home() {
                              
 
 
-                                <Link to={`/news/${news.title}`}>
+                                <Link key={news.title} to={`/news/${news.title}`}>
 
 
                                     <div key={id} className='news-item my-4'>
@@ -101,3 +101,4 @@ export default function Home() {
       
     )
 }
+
