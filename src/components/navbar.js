@@ -92,7 +92,7 @@ signOut(auth).then(() => {
 
                 }
                 {
-                    loggedIn ? <button onClick={logout} className="bg-red-700 left-[90%] p-3 absolute text-yellow-50">Logout</button>
+                    loggedIn ? <button onClick={logout} className="logout-btn">Logout</button>
                     :
                     null
 
@@ -139,7 +139,7 @@ signOut(auth).then(() => {
 
                 }
                  {
-                    loggedIn ? <button onClick={logout} className= "  bg-red-700 left-[90%] p-3  text-yellow-50">Logout</button>
+                    loggedIn ? <button onClick={logout} className= "logout-btn">Logout</button>
                     :
                     null
 
