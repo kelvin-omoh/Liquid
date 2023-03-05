@@ -84,7 +84,7 @@ export default function Navbar() {
                 <Link to='/news'><li id={pathname === '/news' && 'active'} >NEWS</li></Link>
                 <Link to='/investors'><li id={pathname === '/investors' && 'active' } >INVESTORS</li></Link>
                 {
-                    loggedIn ?   <Link to='/admin'><li onClick={toggle} id={pathname === '/admin' && 'active'} >DASHBOARD</li></Link>
+                    loggedIn ?   <Link to='/admin'><li id={pathname === '/admin' && 'active'} >DASHBOARD</li></Link>
                     :
                     null
 
@@ -111,7 +111,7 @@ export default function Navbar() {
                 <Link to='/news'><li id={pathname === '/news' && 'active'} >NEWS</li></Link>
                 <Link to='/investors'><li id={pathname === '/investors' && 'active' } >INVESTORS</li></Link>
                 {
-                    loggedIn ?   <Link to='/admin'><li onClick={toggle} id={pathname === '/admin' && 'active'} >DASHBOARD</li></Link>
+                    loggedIn ?   <Link to='/admin'><li id={pathname === '/admin' && 'active'} >DASHBOARD</li></Link>
                     :
                     null
 
@@ -125,13 +125,13 @@ export default function Navbar() {
                "flex flex-col md:flex-row absolute right-0 top-[6em] gap-7  ease-in-out duration-500 bg-[rgb(36,32,33)] p-4 justify-center w-screen  "
             }
                >
-                <Link to='/about' ><li onClick={toggle} id={pathname === '/about' && 'active'}>ABOUT</li></Link>
-                <Link to='/funds'><li onClick={toggle} id={pathname === '/funds' && 'active'} >FUNDS</li></Link>
-                <Link to='/tracts'><li onClick={toggle} id={pathname === '/tracts' && 'active'} >TRACTS</li></Link>
-                <Link to='/news'><li onClick={toggle} id={pathname === '/news' && 'active'} >NEWS</li></Link>
-                <Link to='/investors'><li onClick={toggle} id={pathname === '/investors' ? 'investor-active' : 'investor'} >INVESTORS</li></Link>
+                <Link to='/about' ><li id={pathname === '/about' && 'active'}>ABOUT</li></Link>
+                <Link to='/funds'><li id={pathname === '/funds' && 'active'} >FUNDS</li></Link>
+                <Link to='/tracts'><li id={pathname === '/tracts' && 'active'} >TRACTS</li></Link>
+                <Link to='/news'><li id={pathname === '/news' && 'active'} >NEWS</li></Link>
+                <Link to='/investors'><li id={pathname === '/investors' ? 'investor-active' : 'investor'} >INVESTORS</li></Link>
                 {
-                    loggedIn ?   <Link to='/admin'><li onClick={toggle} id={pathname === '/admin' && 'active'} >DASHBOARD</li></Link>
+                    loggedIn ?   <Link to='/admin'><li id={pathname === '/admin' && 'active'} >DASHBOARD</li></Link>
                     :
                     null
 

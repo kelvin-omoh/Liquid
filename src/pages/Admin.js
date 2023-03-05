@@ -205,7 +205,7 @@ const Admin = () => {
 		)
 	} else {
 		return (
-		<div className='h-screen' style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', fontSize: 'clamp(1em, 2.7vw, 2.8em)'}}>
+		<div className='h-screen' style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', fontSize: 'clamp(1em, 2.5vw, 2.6em)'}}>
 			<h1>You're Not an Admin</h1>
 			<p>Navigate to the Home Page Here <Link to='/'><button style={{padding: '0.3em 1.3em 0.3em 1.3em', borderRadius: '10px', color: 'white', backgroundColor: 'black'}}>Home</button></Link></p>
 		</div>
