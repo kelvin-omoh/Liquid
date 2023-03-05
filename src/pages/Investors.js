@@ -23,13 +23,13 @@ export default function Investors() {
 
     const form = useRef();
     const [email,setEmail]=useState("")
+    const [email2,setEmail2]=useState("")
     const[firstName,setFirstName]=useState("")
     const[secondName,setSecondName]=useState("")
-    const [amount, setAmount] = useState("")
-    const[phoneNumber,setPhoneNumber]=useState("")
-    const [password,setPassword]=useState("")
-    // const [errrors,seterrors]=useState("")
-    const dispatch=useDispatch()
+    // const [amount, setAmount] = useState("")
+    // const[phoneNumber,setPhoneNumber]=useState("")
+    // const [password,setPassword]=useState("")
+    // const dispatch=useDispatch()
     const [displayError, setDisplayError] = useState(false)
     const [logInLoading, setLogInLoading] = useState(false)
     const userState=useSelector(state=>state.user.state)
@@ -121,8 +121,15 @@ export default function Investors() {
     e.preventDefault()
    setLogInLoading(true)
      
+   //  alert()
+
+   //reset
+   setEmail2("")
+   setPassword("")
+  
+      console.log(email2);
    e.preventDefault()
-   signInWithEmailAndPassword(auth, email, password)
+   signInWithEmailAndPassword(auth, email2, password)
    .then((userCredential) => {
         setLoggedIn(true)
         setLogInLoading(false)
@@ -142,19 +149,24 @@ export default function Investors() {
     if(user){
         setLoggedIn(true)
     }
+    console.log(email2);
+    console.log(password);
+
     navigate("/admin")
     setEmail("")
     setPassword("")
-    //  setislogged(true)
 
-    
-     // ...
+     
    })
    .catch((error) => {
         const errorCode = error.code;
         setLogInLoading(false)
         setDisplayError(true)
         console.log(errorCode);
+
+    // console.log(email2);
+    // console.log(password);
+    //  console.log(errorCode);
 
    });
 }
@@ -228,7 +240,7 @@ export default function Investors() {
                 <form onSubmit={handleLogin}>
                     <div className='loginItem'>
                         <label>Email-Address</label>
-                        <input required onChange={(e)=> ( setEmail(e.target.value), displayError && setDisplayError(false) )} value={email}  type={'text'} />
+                        <input required onChange={(e)=> ( setEmail2(e.target.value), value={email2}, displayError && setDisplayError(false) )} value={email}  type={'text'} />
                     </div>
                     <div className='loginItem'>
                         <label>Password</label>
@@ -236,7 +248,10 @@ export default function Investors() {
                     </div> 
                         <p>Remember Me</p>
                         <button style={ logInLoading ? {opacity: '0.5'} : {opacity: '1'}}>Log In</button>
-                    <p>Lost your password? </p>
+                        <p>Lost your password? </p>
+
+                    <button >Log In</button>
+                <p>Lost your password? </p>
                </form>
                 {displayError && <p style={{color: 'red'}}>Incorrect email or Password...</p>}
             </div>
