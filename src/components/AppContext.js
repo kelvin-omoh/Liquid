@@ -2,21 +2,30 @@ import { createContext, useEffect, useState } from "react";
 import axios from "axios";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../Firebase";
+import { newsData as staticNewsData } from "../newsData/news";
 const AppContext = createContext()
 
 function ContextProvider(props) {
 
-    const [newsData,setNewsData]=useState([])
+    const [newsData ]=useState(staticNewsData)
     const [newsImg,setNewsImg]=useState([])
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(false)
-    const [loggedIn, setLoggedIn] = useState(false)
-    // const[eachNews,setEachNews]=useState("")
 
-    const url =`https://newsapi.org/v2/everything?q=finance+technology+money&apiKey=1f7e0a872316481f9dbe8cd016a43eb9`;
+    const [loading ] = useState(false);
+    const [error ] = useState(false)
 
-    
+    const [loggedIn, setLoggedIn] = useState(false) // chnage to false
 
+    // const url =`https://newsapi.org/v2/everything?q=finance+technology+money&apiKey=1f7e0a872316481f9dbe8cd016a43eb9`;
+
+    useEffect(() => {
+        //to prevent it from reloading
+        onAuthStateChanged(auth, (r) => {
+            setLoggedIn(r)
+        })
+
+    },[])
+
+/*
  useEffect(() => {
     function fetchNews() {
         console.log('fetch data')
@@ -54,7 +63,7 @@ function ContextProvider(props) {
     })
 
  },[]);
-   
+*/
 
     return (
         <AppContext.Provider value={{newsData, newsImg, loading, error, loggedIn, setLoggedIn}}>
