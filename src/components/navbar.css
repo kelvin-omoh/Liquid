@@ -1,6 +1,7 @@
 .navbar {
     display: flex;
     justify-content: space-around;
+    width: 100%;
     background-color: rgb(36,32,33);
     /* padding: 0.5em; */
     color: white;
@@ -14,7 +15,7 @@
 }
 
 .navbar > ul {
-   
+    
     list-style-type: none;
 }
 h1{
@@ -24,7 +25,7 @@ h1{
 
 .navbar a {
     text-decoration: none;
-    padding-left: 1em;
+    padding-left: em;
     color: white;
     align-self: center;
 }

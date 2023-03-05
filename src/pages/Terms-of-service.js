@@ -1,5 +1,5 @@
+import { Link } from 'react-router-dom'
 import './Terms-and-privacy.css'
-
 export default function TermsOfService() {
     return (
         <div className="terms-and-privacy">
@@ -7,7 +7,7 @@ export default function TermsOfService() {
             
             <h3>AGREEMENT TO TERMS</h3>
             
-            <p>These Terms and Conditions constitute a legally binding agreement made between you, whether personally or on behalf of an entity (“you”) and Liquid QOZB II LLC (“we,” “us” or “our”), concerning your access to and use of the liquidoz.com website as well as any other media form, media channel, mobile website or mobile application related, linked, or otherwise connected thereto (collectively, the “Site”).</p>
+            <p>These Terms and Conditions constitute a legally binding agreement made between you, whether personally or on behalf of an entity (“you”) and Global Finance (“we,” “us” or “our”), concerning your access to and use of the <Link to="http://globalfinancial.us/">globalfinancial.us</Link> website as well as any other media form, media channel, mobile website or mobile application related, linked, or otherwise connected thereto (collectively, the “Site”).</p>
             <p>You agree that by accessing the Site, you have read, understood, and agree to be bound by all of these Terms and Conditions. If you do not agree with all of these Terms and Conditions, then you are expressly prohibited from using the Site and you must discontinue use immediately.</p>
             <p>Supplemental terms and conditions or documents that may be posted on the Site from time to time are hereby expressly incorporated herein by reference. We reserve the right, in our sole discretion, to make changes or modifications to these Terms and Conditions at any time and for any reason.</p>
             <p>We will alert you about any changes by updating the “Last updated” date of these Terms and Conditions, and you waive any right to receive specific notice of each such change.</p>
@@ -130,7 +130,7 @@ export default function TermsOfService() {
             <p>(4) in our sole discretion and without limitation, notice, or liability, to remove from the Site or otherwise disable all files and content that are excessive in size or are in any way burdensome to our systems;</p>
             <p>(5) otherwise manage the Site in a manner designed to protect our rights and property and to facilitate the proper functioning of the Site.</p>
             <p>PRIVACY POLICY</p>
-            <p>We care about data privacy and security. Please review our <a href="https://liquidoz.com/privacy-policy/">Privacy Policy</a>. By using the Site, you agree to be bound by our Privacy Policy, which is incorporated into these Terms and Conditions. Please be advised the Site is hosted in the United States.</p>
+            <p>We care about data privacy and security. Please review our <a href="https://globalfinancial.us/privacy-policy/">Privacy Policy</a>. By using the Site, you agree to be bound by our Privacy Policy, which is incorporated into these Terms and Conditions. Please be advised the Site is hosted in the United States.</p>
             <p>If you access the Site from the European Union, Asia, or any other region of the world with laws or other requirements governing personal data collection, use, or disclosure that differ from applicable laws in the United States, then through your continued use of the Site, you are transferring your data to the United States, and you expressly consent to have your data transferred to and processed in the United States.</p>
             <p>[Further, we do not knowingly accept, request, or solicit information from children or knowingly market to children. Therefore, in accordance with the U.S. Children’s Online Privacy Protection Act, if we receive actual knowledge that anyone under the age of 13 has provided personal information to us without the requisite and verifiable parental consent, we will delete that information from the Site as quickly as is reasonably practical.]</p>
             
@@ -250,9 +250,12 @@ export default function TermsOfService() {
             <p>You hereby waive any and all defenses you may have based on the electronic form of these Terms and Conditions and the lack of signing by the parties hereto to execute these Terms and Conditions.</p>
             
             <h3>CONTACT US</h3>
-            
+            {/* Address: 1500 Pennsylvania Avenue, NW Washington, D.C. 20220 */}
+
+
+{/* (202) 871-3196 */}
             <p>In order to resolve a complaint regarding the Site or to receive further information regarding use of the Site, please contact us at:</p>
-            <p>Liquid QOZB II, LLC<br />P.O. Box 19045, Austin, TX, 78760-0945<br />(512) 877-7153<br />get@liquidoz.com</p>					
+            <p><br />P.O. Box 1500 Pennsylvania Avenue, NW Washington, <br />(202) 871-3196<br />globalfinance8812@gmail.com</p>					
 
         </div>
     )

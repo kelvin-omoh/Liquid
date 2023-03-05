@@ -1,14 +1,17 @@
+import { Link } from "react-router-dom"
+
+
 export default function PrivacyPolicy() {
     return (
         <div className="terms-and-privacy">
             <h1>Privacy Policy</h1>
-            <p>This policy is to inform visitors to the liquidoz.com Web site of its data gathering methods and use of such data. liquidoz.com&nbsp;collects many types of data throughout its Web site and the degree to which this data is used will be specified below. Liquid may change this policy at any time at its sole discretion and without notice.</p>
+            <p>This policy is to inform visitors to the <Link to="http://globalfinancial.us/">globalfinancial.us</Link>  Web site of its data gathering methods and use of such data. <Link to="http://globalfinancial.us/">globalfinancial.us</Link>&nbsp;collects many types of data throughout its Web site and the degree to which this data is used will be specified below. Global Finance may change this policy at any time at its sole discretion and without notice.</p>
             
             <h2>HIPPA Privacy Practices</h2>
-            <p>Liquid will comply with all federal and state laws that pertain to any aspect of the clinical practices or business procedures of the Department. In particular, privacy and security rules relating to the Health Insurance Portability and Accountability Act (HIPAA), along with related state laws, are integral to matters of privacy, medical records, and the confidentiality of communications. For more information, see the U.S. Department of Health &amp; Human Services website on Health Information Privacy.</p>
+            <p>Global Finance will comply with all federal and state laws that pertain to any aspect of the clinical practices or business procedures of the Department. In particular, privacy and security rules relating to the Health Insurance Portability and Accountability Act (HIPAA), along with related state laws, are integral to matters of privacy, medical records, and the confidentiality of communications. For more information, see the U.S. Department of Health &amp; Human Services website on Health Information Privacy.</p>
             
             <h2>Logs and Activity Reports</h2>
-            <p>The liquidoz.com&nbsp;Web site collects data each time a visitor enters the liquidoz.com&nbsp;Web site or moves from one page to the next within the Web site. This information is used to gather statistics about visitors as a whole and in no way points to individuals. Personal information is not gathered in the hexpropertires.com Web site log files. The information gathered falls into these categories.</p>
+            <p>The <Link to="http://globalfinancial.us/">globalfinancial.us</Link>&nbsp;Web site collects data each time a visitor enters the <Link to="http://globalfinancial.us/">globalfinancial.us</Link>&nbsp;Web site or moves from one page to the next within the Web site. This information is used to gather statistics about visitors as a whole and in no way points to individuals. Personal information is not gathered in the hexpropertires.com Web site log files. The information gathered falls into these categories.</p>
 
             <ul>
                 <li>Time of day.</li>
@@ -21,8 +24,8 @@ export default function PrivacyPolicy() {
             <p>The above information is processed and analyzed to keep the hexpropertires.com Web site up to industry standards. Portions of the Website’s design and functionality are influenced by the data collected.</p>
             
             <h2>Collection and Use of Information</h2>
-            <p>The liquidoz.com&nbsp;Web site does not sell or lease personal information. Information submitted to the liquidoz.com&nbsp;Web site may be subject to the Texas Public Information Act. Information about the Texas Public Information Act is available from the Office of the Texas Attorney General at http://www.oag.state.tx.us/open/requestors.shtml.</p>
-            <p>For more information regarding specific Liquid Web pages or Web applications, contact the team at get@liquidoz.com.</p>
+            <p>The <Link to="http://globalfinancial.us/">globalfinancial.us</Link>&nbsp;Web site does not sell or lease personal information. Information submitted to the <Link to="http://globalfinancial.us/">globalfinancial.us</Link>m&nbsp;Web site may be subject to the Texas Public Information Act. Information about the Texas Public Information Act is available from the Office of the Texas Attorney General at http://www.oag.state.tx.us/open/requestors.shtml.</p>
+            <p>For more information regarding specific Global Finance Web pages or Web applications, contact the team at  <Link to="http://globalfinancial.us/">globalfinancial.us</Link>.</p>
             <p>Often personal or business information is requested by an hexpropertires.com Web site online service. The request of information, storage of that information and the dissemination of that information will vary based on the department and/or service.</p>
             <p>In each instance, clear indications of whether or not the information is required or optional will be marked.</p>
             <p>The hexpropertires.com Web site may be required by law enforcement or judicial authorities to provide personally identifiable information to the appropriate governmental authorities. We reserve the right to report to law enforcement agencies any activities that we in good faith believe to be unlawful.</p>
@@ -33,7 +36,7 @@ export default function PrivacyPolicy() {
             
             <h2>Cookies</h2>
             <p>Cookies are small text files that are stored on the visitor’s hard drive in order to place certain information regarding the transaction. A session ID, along with time date and other information may be gathered. In order for the transaction to take place, cookies must be enabled by your browser.</p>
-            <p>The liquidoz.com&nbsp;Web site uses cookies in some of its online services. Visitors to the Web site will be informed of when and where these cookies are present.</p>					
+            <p>The <Link to="http://globalfinancial.us/">globalfinancial.us</Link>&nbsp;Web site uses cookies in some of its online services. Visitors to the Web site will be informed of when and where these cookies are present.</p>					
         </div>
 
     )
