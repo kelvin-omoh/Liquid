@@ -52,33 +52,34 @@ signOut(auth).then(() => {
     return (
         
         <div className="navbar p-9 justify-center  relative  w-screen flex flex-col md:flex-row ">
-            <h1 className="text-[1.5em] pr-10 font-semibold r "><Link to='/'>GLOBAL FINANCE</Link></h1>
-            <div className="  text-white md:hidden absolute top-[2.5em] right-[8%]">
+            
+            <h1 className=" text-[1.2em] md:text-[1.5em]   font-semibold  mr-8 "><Link to='/'>GLOBAL FINANCE</Link></h1>
+            <div className="  text-white  md:hidden absolute top-[2.5em] right-[8%]">
                 {hambugger===false ? 
             <>
             <AiOutlineMenu onClick={toggle} size={30} className=" text-white"/>
             </>   :
             <>
-            <AiOutlineClose onClick={toggle} size={30} className=" text-white"/>
+            <AiOutlineClose onClick={toggle} size={30} className="  text-white"/>
             </> 
             
             }
                 
             </div>
             <ToastContainer
-position="top-right"
-autoClose={5000}
-hideProgressBar={false}
-newestOnTop={false}
-closeOnClick
-rtl={false}
-pauseOnFocusLoss
-draggable
-pauseOnHover
-theme="light"
-/>
+                position="top-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
+                />
             
-            <ul className=" hidden md:flex   " >
+            <ul className=" hidden md:flex  gap-3  " >
                 <Link to='/about' ><li  id={pathname === '/about' && 'active'}>ABOUT</li></Link>
                 <Link to='/funds'><li id={pathname === '/funds' && 'active'} >FUNDS</li></Link>
                 <Link to='/tracts'><li id={pathname === '/tracts' && 'active'} >TRACTS</li></Link>
