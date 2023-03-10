@@ -13,6 +13,7 @@ import Admin from './pages/Admin';
 import SingleNews from './pages/dynamic-page/singleNews';
 import PrivacyPolicy from './pages/Privacy-policy';
 import TermsOfService from './pages/Terms-of-service';
+import Services from './pages/services';
 import { Link } from 'react-router-dom';
 import FAQ from './pages/FAQ';
 
@@ -29,6 +30,7 @@ function App() {
       <div className='other-pages'>
         <Routes>
           <Route path='/' element={<Home />}></Route>
+          <Route path='services' element={<Services />}></Route>
           <Route path='/about' element={<About />}></Route>
           <Route path='/admin' element={<Admin/>}></Route>
           <Route path='/funds' element={<Funds />}></Route>
