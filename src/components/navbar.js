@@ -53,7 +53,7 @@ signOut(auth).then(() => {
         
         <div className="navbar p-9 justify-center  relative  w-screen flex flex-col md:flex-row ">
             
-            <h1 className=" text-[1.2em] md:text-[1.5em]   font-semibold  mr-8 "><Link to='/'>GLOBAL FINANCE</Link></h1>
+            <h1 className=" text-[1.2em] md:text-[1.5em]   font-semibold  mr-8 "><Link to='/'>BLUEGATE INVESTMENT</Link></h1>
             <div className="  text-white  md:hidden absolute top-[2.5em] right-[8%]">
                 {hambugger===false ? 
             <>

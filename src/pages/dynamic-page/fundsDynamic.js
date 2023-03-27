@@ -140,7 +140,7 @@ export default function FundsDynamic() {
                     </div>
                 </div>
             </div>
-            <InvestorProspectus />
+             
         </>
 
     )

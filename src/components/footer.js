@@ -11,7 +11,7 @@ export default function Footer() {
     return (
         <footer className=' flex flex-col    justify-center' >
             <div className='footer-black flex w-full flex-col gap-5'>
-                <h1>GLOBAL FINANCE</h1>
+                <h1>BLUEGATE INVESTMENT</h1>
                 <p>Diversified Opportunity Zone And Blockchain Funds</p>
 
                 <div className="icons flex ">
