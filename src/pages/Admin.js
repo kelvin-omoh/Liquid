@@ -198,7 +198,7 @@ const Admin = () => {
 			<p className="mt-5">This table contains users that have requested prospectus  <a className="text-blue-600 hover:underline" target="_blank">contact</a>.
 			</p>
 
-			
+		
 		</div>
 		</div>		
 		</div>
