@@ -19,7 +19,7 @@ export default function Tracts() {
                         <h1>TRACT 24.13</h1>
                         <h2>EAST ST ELMO</h2>
                         <p>
-                            East St Elmo represents a massive opportunity for GLOBAL FINANCE to invest in sites designed for both
+                            East St Elmo represents a massive opportunity for BLUEGATE INVESTMENT to invest in sites designed for both
                             our startup communities and for rental income. Campus #1 is currently being planned for launch in this census tract.
                         </p>
 
@@ -33,7 +33,7 @@ export default function Tracts() {
                         <h1>TRACT 24.13</h1>
                         <h2>EAST ST ELMO</h2>
                         <p>
-                            East St Elmo represents a massive opportunity for GLOBAL FINANCE to invest in sites designed for both
+                            East St Elmo represents a massive opportunity for BLUEGATE INVESTMENT to invest in sites designed for both
                             our startup communities and for rental income. Campus #1 is currently being planned for launch in this census tract.
                         </p>
 
@@ -49,7 +49,7 @@ export default function Tracts() {
                         <h1>TRACT 24.13</h1>
                         <h2>EAST ST ELMO</h2>
                         <p>
-                            East St Elmo represents a massive opportunity for GLOBAL FINANCE to invest in sites designed for both
+                            East St Elmo represents a massive opportunity for BLUEGATE INVESTMENT to invest in sites designed for both
                             our startup communities and for rental income. Campus #1 is currently being planned for launch in this census tract.
                         </p>
 
@@ -63,7 +63,7 @@ export default function Tracts() {
                         <h1>TRACT 24.13</h1>
                         <h2>EAST ST ELMO</h2>
                         <p>
-                            East St Elmo represents a massive opportunity for GLOBAL FINANCE to invest in sites designed for both
+                            East St Elmo represents a massive opportunity for BLUEGATE INVESTMENT to invest in sites designed for both
                             our startup communities and for rental income. Campus #1 is currently being planned for launch in this census tract.
                         </p>
 
@@ -74,7 +74,7 @@ export default function Tracts() {
                 </div>
 
             </div>
-            <InvestorProspectus />
+             
         </div>
 
     )

@@ -9,18 +9,18 @@ export default function About() {
             <div className="about-page-text py-9">
                 <h1>COMPANY</h1>
 
-                <p>GLOBAL FINANCE II is an investment opportunity that allows investors to defer and potentially reduce their capital gains taxes by investing in designated low-income communities 
-                    across the United States. Our oz fund,GLOBAL FINANCE QOF II is focused on providing capital for businesses and real estate projects that have the potential for strong financial
+                <p>BLUEGATE INVESTMENT II is an investment opportunity that allows investors to defer and potentially reduce their capital gains taxes by investing in designated low-income communities 
+                    across the United States. Our oz fund,BLUEGATE INVESTMENT QOF II is focused on providing capital for businesses and real estate projects that have the potential for strong financial
                     returns and positive social impact.
                 </p>
                 <br />
                 <p>
-                    With GLOBAL FINANCE, investors can support the growth and revitalization of underserved communities while also growing their wealth. Our team of experienced professionals
+                    With BLUEGATE INVESTMENT, investors can support the growth and revitalization of underserved communities while also growing their wealth. Our team of experienced professionals
                     carefully selects and monitors investments, ensuring that our fund is well-diversified and has the potential for strong returns.
                 </p>
             </div>
             
-            <InvestorProspectus />
+             />
 
             <div className="about-page-text flex  flex-col gap-9 p-9" >
     
@@ -38,7 +38,7 @@ export default function About() {
                     <p>
                         Tim began working in Austin as a corporate finance and communications consultant to OTC and NASDAQ listed companies. In 2018, he left IR Smartt to become the Marketing Director
                         at commercial real estate brokerage, Asterra Properties. His real estate experience includes performing as one of the leading sales agents at <span className=' text-red-500'>Asterra</span>  during from 2018-2021 with a 
-                        focus on new construction residential and multifamily assets. Tim is responsible for GLOBAL FINANCE's day-to-day operations including real estate acquisitions, project assessment, fund management and investor relations.
+                        focus on new construction residential and multifamily assets. Tim is responsible for BLUEGATE INVESTMENT's day-to-day operations including real estate acquisitions, project assessment, fund management and investor relations.
                     </p>
                 </div>
 
@@ -78,7 +78,7 @@ export default function About() {
                           <h1 className='about-blue-txt' >DESIGN</h1>
                     </div>
                    
-                    <p>Formerly of Letterpress firm company Sanctuary Design, Nicole brings almost a decade of print, graphic and interior design experience to GLOBAL FINANCE. A graduate of  <span className=' text-red-500'> Texas State's Fine Arts </span>  program, Nicole is responsible for brand development and her
+                    <p>Formerly of Letterpress firm company Sanctuary Design, Nicole brings almost a decade of print, graphic and interior design experience to BLUEGATE INVESTMENT. A graduate of  <span className=' text-red-500'> Texas State's Fine Arts </span>  program, Nicole is responsible for brand development and her
                         work can be found across all our portfolio companies.</p>
                 </div>
             </div>

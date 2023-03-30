@@ -28,7 +28,7 @@ export default function Home() {
             <div className='hero-container'>
                 <img src={heroImg}></img>
                 <div className='hero-texts flex flex-col gap-3 md:gap-6 '>
-                    <h1 className=' text-[1.9em] md:text-[2.8em]'>GLOBAL FINANCE INVESTMENT</h1>
+                    <h1 className=' text-[1.9em] md:text-[2.8em]'>BLUEGATE INVESTMENT</h1>
                     <p>Diversified Opportunity Zone And Blockchain Funds</p>
                     <div className='hero-btn'>
                         <Link to='/funds'><button>Learn More</button></Link>
@@ -64,7 +64,7 @@ export default function Home() {
                                             <h3>{news.title.substring(0,40)} <span style={{color: 'orange'}}>...Read more</span></h3>
                                             
                                             <hr/>
-                                            <p>GLOBAL FINANCE </p>
+                                            <p>BLUEGATE INVESTMENT </p>
                                         </div>
                                     </div>
                                 </Link>
@@ -74,8 +74,6 @@ export default function Home() {
                 }
 
             </div>
-
-            <InvestorProspectus />
 
             <div className='oz-funds  flex flex-col my-[4em]'>
                 <div className='oz-texts '>

@@ -1,0 +1,99 @@
+.service-page {
+    margin-top: 0.5em;
+}
+
+.service-page > .service-page-details > h1 {
+    font-size: clamp(2em, 3vw, 3.1em);
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+.service-page > .service-page-headers {
+    background-color: rgb(36,32,33);
+    color: white;
+}
+
+.service-page > .service-page-headers > h1 {
+    font-size: clamp(1.7em, 2.5vw, 2.7em);
+}
+
+.service-page-headers button {
+    background-color: rgb(148, 148, 148);
+    padding: 0.6em 1.6em 0.6em 1.6em;
+    margin-top: 0.6em;
+    margin-bottom: 1em;
+}
+
+
+.service-page-gridContainer {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 2em;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3em;
+}
+
+.service-page-gridItem {
+    /* box-shadow: 5px 5px 5px 5px #757575; */
+    box-shadow: 1px 1px 5px 3px rgba(142, 142, 142, 0.2);
+    padding-bottom: 3em;
+    padding-left: 1em;
+    padding-right: 0.5em;
+}
+
+.service-page-gridItem h2 {
+    color: black;
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+.service-page-gridItem p {
+    color: rgb(109, 108, 108);
+    text-align: left;
+}
+
+@media screen and (max-width: 871px) {
+    * {
+        /* background-color: red; */
+    }
+
+    .service-page {
+        margin-top: 2.7em;
+    }
+    
+}
+@media screen and (max-width: 930px) {
+    * {
+        /* background-color: red; */
+    }
+
+    .service-page-gridContainer {
+        grid-template-columns: auto auto ;
+    }
+
+}
+
+@media screen and (max-width: 766px) {
+    /* * {
+        background-color: red;
+    } */
+    .service-page {
+        margin-top: unset;
+    }
+
+    .service-page-gridContainer {
+        grid-template-columns: auto ;
+        gap: 2em;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 3em;
+    }
+
+    .service-page-gridItem {
+        /* box-shadow: 5px 5px 5px 5px #757575; */
+        box-shadow: 1px 4px 5px 3px rgba(142, 142, 142, 0.2);
+    }
+}

@@ -71,7 +71,7 @@ export default function News() {
                                     
                                     <hr/>
                                     <div className='flex flex-col gap-1 md:flex-row justify-between items-center'>
-                                        <p>GLOBAL FINANCE  </p>
+                                        <p>BLUEGATE INVESTMENT  </p>
                                     <p>{news.publishedAt}</p>
                                     </div>
                                 
@@ -88,7 +88,7 @@ export default function News() {
                 }
 
             </div>
-            <InvestorProspectus />
+             
         </div>
     )
 }

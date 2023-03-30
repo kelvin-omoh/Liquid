@@ -20,7 +20,7 @@ import InvestorProspectus from '../components/investorProspectus';
     },
     {
         Question: "Q3 - What return on investment (ROI) do you provide?",
-        Ans: `Returns at GLOBAL FINANCE are calculated in three ways.
+        Ans: `Returns at BLUEGATE INVESTMENT are calculated in three ways.
       
           Tax savings – provided yearly on Form 4797, Part 1.
           Income – paid quarterly proportional to fund assets.
@@ -84,7 +84,7 @@ const FAQ = () => {
                 ))}
             
             </div>
-            <InvestorProspectus/>
+             
             </div>
             </div>
            
