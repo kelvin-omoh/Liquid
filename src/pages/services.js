@@ -1,9 +1,10 @@
 import './services.css'
 import { useNavigate } from 'react-router'
-
+import blog1 from '../Images/blog 1.png'
 export default function Services () {
 
     const navigateTo = useNavigate()
+
 
     return (
         <div className='service-page'>
@@ -96,6 +97,60 @@ export default function Services () {
 
                 </div>
             </div>
+
+            <div className='service-page-details text-white h-[22em] py-5  w-full' style={{background:`url('${blog1}')`,backgroundSize:"cover",backgroundRepeat:"no-repeat"}}>
+                <h1>Documents Needed</h1>
+                <p>Ready to get your loans serviced?</p>
+
+                <button className=' p-5 text-[#e1dede] bg-[#380909] rounded-md my-4' onClick={() => navigateTo('/copy-of-wrap-loan-servicing')}>Get started</button>
+            </div>
+
+            <div className=' flex p-4 flex-col md:flex-row gap-[4em] my-5 py-5 text-left justify-center'>
+
+                <div className='  bg-[#2c2a2ae4] md:w-[40%] text-white p-4 backdrop-blur-md rounded-md'>
+                    <h1>Traditional Loan</h1>
+                    <ul className='list-disc p-4'>
+                        <li>Promissory Note</li>
+                        <li>Deed of Trust</li>
+                        <li>Closing Disclosure or HUD-1</li>
+                        <li>Transfer of Lien (if applicable)</li>
+                        <li>Allonge to Promissory Note</li>
+                        <li>Truth-in-Lending</li>
+                        <li>Sales Contract</li>
+                        <li>1003 or Borrower Application</li>
+                        <li>W-9</li>
+                        <li>First Payment Letter</li>
+                        <li>Homeowners Insurance</li>
+                        <li>Tax Certificate</li>
+                        <li>If Account is Escrowed: Initial Escrow Disclosure, Initial or Transfer of Escrow Funds</li>
+                    </ul>
+                    
+                </div>
+                
+                <div className=' bg-[#2c2a2ae4] md:w-[40%] text-white p-4 backdrop-blur-3xl rounded-md'>
+                    <h1>Traditional Loan</h1>
+                    <ul className='list-disc p-4'>
+                        <li>Promissory Note</li>
+                        <li>Deed of Trust</li>
+                        <li>Closing Disclosure</li>
+                        <li>Sales Contract</li>
+                        <li>1003</li>
+                        <li>W-9</li>
+                        <li>First payment Letter</li>
+                        <li>Homeowner’s Insurance</li>
+                        <li>Borrower(s) Information: Contact Number, Social Security #, and DOB</li>
+                        <li>Copy of mortgage statement from underlying mortgage</li>
+                        <li>Information for making payment to underlying mortgage (online or by phone. sign on information, phone number)</li>
+                          </ul>
+                    
+                </div>
+                
+
+            </div>
+            <div className='m-4'>
+            <p >Please contact us if you have any questions on the documents needed. We realize that there are special circumstances where you do not have all of the above.  In most cases, we can get the information we need through other documents or sources.</p>
+            </div>
+
         </div>
     )
 }
