@@ -42,7 +42,7 @@ export default function Investors() {
         setProspectusLoading(true)
 
        //email
-           emailjs.sendForm('service_gnudc5o', 'template_4ynk22d', form.current, '8QMByjHKBkunDfDEh')
+           emailjs.sendForm('service_iwynchu', 'template_4ynk22d', form.current, '8QMByjHKBkunDfDEh')
              .then(() => {
                 //  console.log(result.text);
                  //object of every new user

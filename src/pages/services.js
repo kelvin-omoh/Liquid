@@ -128,7 +128,7 @@ export default function Services () {
                 </div>
                 
                 <div className=' bg-[#2c2a2ae4] md:w-[40%] text-white p-4 backdrop-blur-3xl rounded-md'>
-                    <h1>Traditional Loan</h1>
+                    <h1>Wrap Loan</h1>
                     <ul className='list-disc p-4'>
                         <li>Promissory Note</li>
                         <li>Deed of Trust</li>
