@@ -9,7 +9,7 @@ export default function About() {
             <div className="about-page-text py-9">
                 <h1>COMPANY</h1>
 
-                <p>BLUEGATE INVESTMENT II is an investment opportunity that allows investors to defer and potentially reduce their capital gains taxes by investing in designated low-income communities 
+                <p>BLUEGATE INVESTMENT  is an investment opportunity that allows investors to defer and potentially reduce their capital gains taxes by investing in designated low-income communities 
                     across the United States. Our oz fund,BLUEGATE INVESTMENT QOF II is focused on providing capital for businesses and real estate projects that have the potential for strong financial
                     returns and positive social impact.
                 </p>
@@ -20,7 +20,7 @@ export default function About() {
                 </p>
             </div>
             
-             />
+
 
             <div className="about-page-text flex  flex-col gap-9 p-9" >
     
