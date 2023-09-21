@@ -1,5 +1,5 @@
 import './App.css';
-import { Route, Routes } from 'react-router';
+import { Route, Routes, useLocation } from 'react-router';
 import Home from './pages/Home';
 import About from './pages/About';
 import Funds from './pages/Funds';
@@ -20,15 +20,32 @@ import FAQ from './pages/FAQ';
 import {Provider} from 'react-redux'
 import store from './Store/Store';
 import Contact from './pages/Contact';
+import { useEffect } from 'react';
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
+
+
 function App() {
  
+
   return (
     <div className="App"  >
+
+<ScrollToTop />
       <Provider store={store} >
 
       
       <Navbar />
-      <div className='other-pages'>
+      <div className='other-pages py-9'>
         <Routes>
           <Route path='/' element={<Home />}></Route>
           <Route path='services' element={<Services />}></Route>

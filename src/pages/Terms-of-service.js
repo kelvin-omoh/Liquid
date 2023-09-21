@@ -249,13 +249,13 @@ export default function TermsOfService() {
             <p>There is no joint venture, partnership, employment or agency relationship created between you and us as a result of these Terms and Conditions or use of the Site. You agree that these Terms and Conditions will not be construed against us by virtue of having drafted them.</p>
             <p>You hereby waive any and all defenses you may have based on the electronic form of these Terms and Conditions and the lack of signing by the parties hereto to execute these Terms and Conditions.</p>
             
-            <h3>CONTACT US</h3>
+            {/* <h3>CONTACT US</h3> */}
             {/* Address: 1500 Pennsylvania Avenue, NW Washington, D.C. 20220 */}
 
 
 {/* (202) 871-3196 */}
-            <p>In order to resolve a complaint regarding the Site or to receive further information regarding use of the Site, please contact us at:</p>
-            <p><br />P.O. Box 1500 Pennsylvania Avenue, NW Washington, <br />(202) 871-3196<br />globalfinance8812@gmail.com</p>					
+            {/* <p>In order to resolve a complaint regarding the Site or to receive further information regarding use of the Site, please contact us at:</p> */}
+            {/* <p><br />P.O. Box 1500 Pennsylvania Avenue, NW Washington, <br />(202) 871-3196<br />globalfinance8812@gmail.com</p>					 */}
 
         </div>
     )
