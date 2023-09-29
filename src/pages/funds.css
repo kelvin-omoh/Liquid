@@ -107,7 +107,7 @@
 .funds-opportunity-text > button {
     border: none;
     padding: 1em 2em 1em 2em;
-    background-color: rgb(255, 196, 0);
+    background-color: #ffc400;
     width:fit-content;
     margin-top: 3%;
     font-size: 1.1em;

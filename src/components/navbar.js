@@ -89,6 +89,7 @@ signOut(auth).then(() => {
                 <Link to='/tracts'><li id={pathname === '/tracts' && 'active'} >TRACTS</li></Link>
                 <Link to='/news'><li id={pathname === '/news' && 'active'} >NEWS</li></Link>
                 <Link to='/investors'><li id={pathname === '/investors' && 'active' } >INVESTORS</li></Link>
+                <Link to='/copy-of-wrap-loan-servicing'><li id={pathname === '/copy-of-wrap-loan-servicing' && 'active' } >CONTACT</li></Link>
                 {
                     loggedIn ?   <Link to='/admin'><li id={pathname === '/admin' && 'active'} >DASHBOARD</li></Link>
                     :
@@ -117,6 +118,7 @@ signOut(auth).then(() => {
                 <Link to='/tracts'><li id={pathname === '/tracts' && 'active'} >TRACTS</li></Link>
                 <Link to='/news'><li id={pathname === '/news' && 'active'} >NEWS</li></Link>
                 <Link to='/investors'><li id={pathname === '/investors' && 'active' } >INVESTORS</li></Link>
+                <Link to='/copy-of-wrap-loan-servicing'><li id={pathname === '/copy-of-wrap-loan-servicing' && 'active' } >CONTACT</li></Link>
                 {
                     loggedIn ?   <Link to='/admin'><li id={pathname === '/admin' && 'active'} >DASHBOARD</li></Link>
                     :
@@ -137,7 +139,8 @@ signOut(auth).then(() => {
                 <Link to='/funds'><li onClick={toggle} id={pathname === '/funds' && 'active'} >FUNDS</li></Link>
                 <Link to='/tracts'><li onClick={toggle} id={pathname === '/tracts' && 'active'} >TRACTS</li></Link>
                 <Link to='/news'><li onClick={toggle} id={pathname === '/news' && 'active'} >NEWS</li></Link>
-                <Link to='/investors'><li onClick={toggle} id={pathname === '/investors' ? 'investor-active' : 'investor'} >INVESTORS</li></Link>
+                <Link to='/investors'><li onClick={toggle} id={pathname === '/investors' ? 'active' : 'investor'} >INVESTORS</li></Link>
+                <Link to='/copy-of-wrap-loan-servicing'><li onClick={toggle} id={pathname === '/copy-of-wrap-loan-servicing' ? 'active' : 'investor'} >CONTACT</li></Link>
                 {
                     loggedIn ?   <Link to='/admin'><li onClick={toggle} id={pathname === '/admin' && 'active'} >DASHBOARD</li></Link>
                     :
